@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/cata/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -112,8 +112,8 @@ alias cleanstop="docker rm -f kind-1-control-plane; docker rm -f kind-2-control-
 alias removevolumes="docker volume prune"
 alias editzsh="nvim ~/.zshrc"
 alias kpods="kubectl get pods -n wcm-system --context kind-kind-1; kubectl get pods -n wcm-system --context kind-kind-2; kubectl get pods -n wcm-system --context kind-kind-3"
-alias k=kubectl
-complete -F __start_kubectl k
+# alias k=kubectl
+# complete -F __start_kubectl k
 alias starttopo="pushd $HOME/go/src/github.com/cisco-app-networking/wcm-helper && bash test_deployment.sh"
 alias gs="git status"
 alias gf="git diff"

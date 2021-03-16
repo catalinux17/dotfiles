@@ -29,6 +29,9 @@ set noshowmode
 set scrolloff=8
 set updatetime=100
 set shortmess+=c
+" set noesckeys
+set timeout timeoutlen=1000 ttimeoutlen=10
+
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -106,12 +109,13 @@ nnoremap <leader>rg :Rg<CR>
 nnoremap <C-k> ddkPk<CR>
 nnoremap <C-j> ddpk<CR>
 nmap <leader>/ :Commentary<CR>
+" Quick exist from insert mode
+inoremap jj <Esc>
 
 " noremap <silent> <C-S> :update<CR>
 nnoremap <silent> <C-s> :update<CR>
 " inoremap <silent> <C-S><C-O>:update<CR>
 
-imap jj <Esc>
 " vnoremap <silent> <C-S><C-C>:update<CR>
 
 " nmap <leader>t :NERDTreeToggle<CR>
