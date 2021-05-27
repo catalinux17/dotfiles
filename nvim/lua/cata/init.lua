@@ -1,0 +1,1 @@
+require("cata.telescope")
