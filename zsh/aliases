@@ -1,0 +1,13 @@
+
+alias vim=nvim
+alias editzsh="nvim ~/.zshrc"
+alias starttopo="pushd $HOME/go/src/github.com/cisco-app-networking/wcm-helper && bash test_deployment.sh"
+alias gs="git status"
+alias c="xclip -selection clipboard"
+alias gweb="gh pr view --web"
+alias minecraft="java -jar ~/Games/minecraft/TLauncher-2.75.jar"
+alias typerace="cd /home/cata/go/src/github.com/catalinux17/typeracer_backend"
+alias clearcache="sudo swapoff -a && swapon -a"
+alias rpd="xmodmap '$HOME/keyboards/manjaro/.Xmodmap'"
+alias ginstall="git clone git@github.com:catalinux17/" # to download repos from catalinux17
+

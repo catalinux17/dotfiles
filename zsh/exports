@@ -1,0 +1,9 @@
+export DENO_INSTALL=$HOME/.deno
+export PATH="$DENO_INSTALL/bin:$PATH"
+export PATH="$(yarn global bin):$PATH"
+export GOPATH=$HOME/go
+export GOROOT=$HOME/Golang/go
+export GOPRIVATE="github.com/catalinux17"
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export EDITOR=nvim
+

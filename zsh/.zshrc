@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
+export ZSH="/home/cata/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -52,24 +52,8 @@ ZSH_THEME="robbyrussell"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
-
+HIST_STAMPS="dd/mm/yyyy"
+plugins=(git golang)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -97,24 +81,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="$(yarn global bin):$PATH"
-export GOPATH=$HOME/go
-export GOROOT=$HOME/Golang/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-alias ciscoa="cd $HOME/go/src/github.com/cisco-app-networking/wcm-api"
-alias ciscoc="cd $HOME/go/src/github.com/cisco-app-networking/wcm-common"
-alias ciscos="cd $HOME/go/src/github.com/cisco-app-networking/wcm-system"
-alias ciscoh="cd $HOME/go/src/github.com/cisco-app-networking/wcm-helper"
-alias cisco="cd $HOME/go/src/github.com/cisco-app-networking"
-alias vim=nvim
-export EDITOR=nvim
-alias cleanstop="docker rm -f kind-1-control-plane; docker rm -f kind-2-control-plane; docker rm -f kind-3-control-plane"
-alias removevolumes="docker volume prune"
-alias editzsh="nvim ~/.zshrc"
-alias kpods="kubectl get pods -n wcm-system --context kind-kind-1; kubectl get pods -n wcm-system --context kind-kind-2; kubectl get pods -n wcm-system --context kind-kind-3"
-# alias k=kubectl
-# complete -F __start_kubectl k
-alias starttopo="pushd $HOME/go/src/github.com/cisco-app-networking/wcm-helper && bash test_deployment.sh"
-alias gs="git status"
-alias gf="git diff"
-alias gc="git checkout"
+
+export ZSHHOME=~/dotfiles/zsh
+source $ZSHHOME/exports
+source $ZSHHOME/aliases

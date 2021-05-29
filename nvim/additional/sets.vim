@@ -33,3 +33,6 @@ set shortmess+=c
 
 set colorcolumn=100
 
+set bg=dark
+set splitright
+set splitbelow

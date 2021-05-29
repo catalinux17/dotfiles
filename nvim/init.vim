@@ -1,3 +1,4 @@
+
 set path+=**
 
 " Nice menu when typing `:find *.py`
@@ -35,13 +36,17 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'machakann/vim-highlightedyank'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'flazz/vim-colorschemes'
 Plug 'morhetz/gruvbox'
 
 call plug#end()
 
 
-colorscheme badwolf
+colorscheme gruvbox
+let g:airline_theme='simple'
+
+
 let mapleader = " "
 nnoremap <Leader>\ :so ~/.config/nvim/init.vim<CR>
 nnoremap <Leader><Return> :e ~/.config/nvim/init.vim<CR>
