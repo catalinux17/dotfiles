@@ -56,3 +56,4 @@ source $HOME/.config/nvim/additional/sets.vim
 source $HOME/.config/nvim/additional/lsp.vim
 source $HOME/.config/nvim/additional/treesitter.vim
 source $HOME/.config/nvim/additional/telescope.vim
+source $HOME/.config/nvim/additional/maps.vim
