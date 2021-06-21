@@ -17,6 +17,7 @@ call plug#begin('~/.vim/plugged')
 
 " Plebvim lsp Plugins
 Plug 'neovim/nvim-lspconfig'
+Plug 'kabouzeid/nvim-lspinstall'
 
 " Telescope
 Plug 'nvim-lua/popup.nvim'
@@ -26,6 +27,8 @@ Plug 'nvim-telescope/telescope.nvim'
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
+
+Plug 'fatih/vim-go'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
