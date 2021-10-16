@@ -85,3 +85,9 @@ source $ZSH/oh-my-zsh.sh
 export ZSHHOME=~/dotfiles/zsh
 source $ZSHHOME/exports
 source $ZSHHOME/aliases
+
+
+source <(kubectl completion zsh)
+
+alias k=kubectl
+complete -F __start_kubectl k
