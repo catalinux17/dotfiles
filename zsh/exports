@@ -4,6 +4,11 @@ export PATH="$(yarn global bin):$PATH"
 export GOPATH=$HOME/go
 export GOROOT=$HOME/Golang/go
 export GOPRIVATE="github.com/catalinux17"
+
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-export EDITOR=nvim
+
+
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 
