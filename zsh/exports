@@ -1,5 +1,6 @@
 export DENO_INSTALL=$HOME/.deno
 export PATH="$DENO_INSTALL/bin:$PATH"
+export PATH="/home/cata/.local/bin:$PATH" #for tmuxp
 export PATH="$(yarn global bin):$PATH"
 export GOPATH=$HOME/go
 export GOROOT=$HOME/Golang/go
