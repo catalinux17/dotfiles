@@ -1,4 +1,4 @@
-
+alias ..="cd .."
 alias vim=nvim
 alias editzsh="nvim ~/.zshrc"
 alias starttopo="pushd $HOME/go/src/github.com/cisco-app-networking/wcm-helper && bash test_deployment.sh"
