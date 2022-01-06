@@ -1,3 +1,3 @@
-rm ~/.config/kitty/kitty.conf || true
+rm ~/.config/kitty/kitty.conf 2> /dev/null
 
 ln -s ~/dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
