@@ -86,4 +86,3 @@ export ZSHHOME=~/dotfiles/zsh
 source $ZSHHOME/exports
 source $ZSHHOME/aliases
 
-eval "$(starship init zsh)"
