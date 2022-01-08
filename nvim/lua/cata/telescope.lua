@@ -14,5 +14,13 @@ M.search_zsh = function()
     })
 end
 
+M.search_dotfiles = function()
+    require("telescope.builtin").find_files({
+        hidden = true,
+        prompt_title = "< dotfiles >",
+        cwd = "$HOME/dotfiles",
+    })
+end
+
 return M
 
