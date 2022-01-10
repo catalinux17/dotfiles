@@ -17,3 +17,6 @@ alias pi="ssh cata@192.168.0.150"
 alias ls=exa
 alias grep=rg
 alias cat=bat
+
+alias starvm="sudo systemctl start libvirtd.service"
+alias tema="/home/cata/Documents/teme/iocla/tema3_infernulbiju"

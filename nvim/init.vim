@@ -36,17 +36,29 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-tmux-navigator'
 
+" Fancy start screen
+Plug 'mhinz/vim-startify'
 
+
+" Appearance
 Plug 'machakann/vim-highlightedyank'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'flazz/vim-colorschemes'
 Plug 'morhetz/gruvbox'
+Plug 'ayu-theme/ayu-vim' " or other package manager
+
 
 call plug#end()
 
 
-colorscheme gruvbox
+set termguicolors     " enable true colors support
+"let ayucolor="light"  " for light version of theme
+let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
+
+
 let g:airline_theme='simple'
 
 
@@ -56,7 +68,6 @@ nnoremap <Leader><Return> :e ~/.config/nvim/init.vim<CR>
 
 
 source $HOME/.config/nvim/additional/sets.vim
-source $HOME/.config/nvim/additional/lsp.vim
 source $HOME/.config/nvim/additional/treesitter.vim
 source $HOME/.config/nvim/additional/telescope.vim
 source $HOME/.config/nvim/additional/maps.vim
