@@ -3,6 +3,6 @@ if not status_ok then
   return
 end
 
-require "user.lsp.lsp-installer"
-require("user.lsp.handlers").setup()
-require "user.lsp.null-ls"
+require "cata.lsp.lsp-installer"
+require("cata.lsp.handlers").setup()
+require "cata.lsp.null-ls"

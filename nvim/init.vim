@@ -15,9 +15,19 @@ set wildignore+=**/.git/*
 
 call plug#begin('~/.vim/plugged')
 
+" completion
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-pPlug'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'saadparwaiz1/cmp_Plug'
+Plug 'hrsh7th/cmp-nvim-lsp'
+
 " Plebvim lsp Plugins
 Plug 'neovim/nvim-lspconfig'
-Plug 'kabouzeid/nvim-lspinstall'
+Plug 'williamboman/nvim-lsp-installer'
+Plug 'tamago324/nlsp-settings.nvim'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 
 " Telescope
 Plug 'nvim-lua/popup.nvim'
@@ -67,6 +77,7 @@ nnoremap <Leader>\ :so ~/.config/nvim/init.vim<CR>
 nnoremap <Leader><Return> :e ~/.config/nvim/init.vim<CR>
 
 
+lua require("cata")
 source $HOME/.config/nvim/additional/sets.vim
 source $HOME/.config/nvim/additional/treesitter.vim
 source $HOME/.config/nvim/additional/telescope.vim
