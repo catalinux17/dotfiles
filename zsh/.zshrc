@@ -18,4 +18,5 @@ source $ZSH/oh-my-zsh.sh
 export ZSHHOME=~/dotfiles/zsh
 source $ZSHHOME/exports
 source $ZSHHOME/aliases
+source ~/.aliases
 
