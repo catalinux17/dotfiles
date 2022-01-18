@@ -1,7 +1,7 @@
 nnoremap <C-s> :update<CR>
 nnoremap <leader>bp :bprev
 nnoremap <leader>bn :bnext
-nnoremap <leader>t :tabedit term://zsh<CR>A
+" nnoremap <leader>t :tabedit term://zsh<CR>A
 tnoremap <Esc> <C-\><C-n>
 
 nnoremap <leader>C :copen<CR>
@@ -17,7 +17,6 @@ nnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-nnoremap <leader>c :Commentary<CR>
+" nnoremap <leader>c :Commentary<CR>
 
 
-nnoremap <leader>F :lua vim.lsp.buf.formatting()
