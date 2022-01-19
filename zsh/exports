@@ -1,12 +1,13 @@
-export DENO_INSTALL=$HOME/.deno
-export PATH="$DENO_INSTALL/bin:$PATH"
-export PATH="/home/cata/.local/bin:$PATH" #for tmuxp
-export PATH="$(yarn global bin):$PATH"
-export GOPATH=$HOME/go
-export GOPRIVATE="github.com/catalinux17"
+export DENO_INSTALL=~/.deno
+export YARN_HOME=$(yarn global bin)
 
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+# install go
+# rm -rf /usr/local/go && tar -C $GOROOT -xzf /mnt/c/Users/Cata/Downloads/go1.17.6.linux-amd64.tar.gz
+export GOPATH=~/gopath
+export GOROOT=~/goroot
+# export GOPRIVATE="github.com/catalinux17"
 
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:$DENO_INSTALL:$YARN_HOME
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
