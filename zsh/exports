@@ -1,4 +1,4 @@
-export DENO_INSTALL=~/.deno
+export DENO_INSTALL=~/.deno/bin
 export YARN_HOME=$(yarn global bin)
 
 # install go
