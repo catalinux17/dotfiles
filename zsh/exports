@@ -7,7 +7,7 @@ export GOPATH=~/gopath
 export GOROOT=~/goroot
 # export GOPRIVATE="github.com/catalinux17"
 
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:$DENO_INSTALL:$YARN_HOME:&DENO_INSTALL
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin:$DENO_INSTALL:$YARN_HOME:$DENO_INSTALL
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
