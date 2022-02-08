@@ -16,18 +16,12 @@ set wildignore+=**/.git/*
 call plug#begin('~/.vim/plugged')
 
 " completion
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-pPlug'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'saadparwaiz1/cmp_Plug'
-Plug 'hrsh7th/cmp-nvim-lsp'
-
-" Plebvim lsp Plugins
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
-Plug 'tamago324/nlsp-settings.nvim'
-Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
 
 " Telescope
 Plug 'nvim-lua/popup.nvim'
@@ -36,7 +30,6 @@ Plug 'nvim-telescope/telescope.nvim'
 
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
 
 Plug 'fatih/vim-go'
 
@@ -49,6 +42,10 @@ Plug 'christoomey/vim-tmux-navigator'
 " Fancy start screen
 Plug 'mhinz/vim-startify'
 
+" Snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 
 " Appearance
 Plug 'machakann/vim-highlightedyank'
@@ -62,11 +59,11 @@ Plug 'ayu-theme/ayu-vim' " or other package manager
 call plug#end()
 
 
-set termguicolors     " enable true colors support
-"let ayucolor="light"  " for light version of theme
-let ayucolor="mirage" " for mirage version of theme
-"let ayucolor="dark"   " for dark version of theme
-colorscheme ayu
+" set termguicolors     " enable true colors support
+" "let ayucolor="light"  " for light version of theme
+" let ayucolor="mirage" " for mirage version of theme
+" "let ayucolor="dark"   " for dark version of theme
+colorscheme gruvbox
 
 
 let g:airline_theme='simple'
@@ -79,6 +76,5 @@ nnoremap <Leader><Return> :e ~/.config/nvim/init.vim<CR>
 
 lua require("cata")
 source $HOME/.config/nvim/additional/sets.vim
-source $HOME/.config/nvim/additional/treesitter.vim
-source $HOME/.config/nvim/additional/telescope.vim
 source $HOME/.config/nvim/additional/maps.vim
+source $HOME/.config/nvim/additional/snippets.vim
