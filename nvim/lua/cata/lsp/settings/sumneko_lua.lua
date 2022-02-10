@@ -1,5 +1,5 @@
 return {
-	settings = {
+	setings = {
 
 		Lua = {
 			diagnostics = {

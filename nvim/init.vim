@@ -16,6 +16,7 @@ set wildignore+=**/.git/*
 call plug#begin('~/.vim/plugged')
 
 " completion
+Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
