@@ -12,6 +12,7 @@ alias rpd="xmodmap '$HOME/keyboards/manjaro/.Xmodmap'"
 alias ginstall="git clone git@github.com:catalinux17/" # to download repos from catalinux17
 alias colliers_ec2="ssh -i ~/.ssh/colliers.pem ubuntu@3.70.241.115"
 alias pi="ssh cata@192.168.0.150"
+alias pitemp="vcgencmd measure_temp && vcgencmd measure_volts"
 
 # rusty
 alias ls=exa
