@@ -4,8 +4,8 @@ export RUST=~/.cargo
 # export YARN_HOME=$(yarn global bin)
 
 export JAVA_HOME=/usr/local/opt/openjdk/bin
-export PATH=$JAVA_HOME/bin:$PATH
-
+export JAVA_HOME2=/opt/homebrew/opt/openjdk/bin
+export BREW=/opt/homebrew/bin
 
 # install go
 # rm -rf /usr/local/go && tar -C $GOROOT -xzf /mnt/c/Users/Cata/Downloads/go1.17.6.linux-amd64.tar.gz
@@ -13,7 +13,7 @@ export GOPATH=~/gopath
 export GOROOT=~/goroot
 # export GOPRIVATE="github.com/catalinux17"
 
-export PATH=$PATH:$LOCAL_BINS:$GOPATH/bin:$GOROOT/bin:$RUST/bin:$DENO_INSTALL
+export PATH=$PATH:$LOCAL_BINS:$GOPATH/bin:$GOROOT/bin:$RUST/bin:$DENO_INSTALL:$BREW:$JAVA_HOME2
 # export PATH=$PATH:$YARN_HOME
 
 export VISUAL=nvim
