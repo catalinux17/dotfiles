@@ -5,6 +5,7 @@ export RUST=~/.cargo
 
 export JAVA_HOME=/usr/local/opt/openjdk/bin
 export JAVA_HOME2=/opt/homebrew/opt/openjdk/bin
+export JAVA_HOME3=~/.local/bin/openjdk/bin
 export BREW=/opt/homebrew/bin
 
 # install go
@@ -13,7 +14,8 @@ export GOPATH=~/gopath
 export GOROOT=~/goroot
 # export GOPRIVATE="github.com/catalinux17"
 
-export PATH=$PATH:$LOCAL_BINS:$GOPATH/bin:$GOROOT/bin:$RUST/bin:$DENO_INSTALL:$BREW:$JAVA_HOME2
+export PATH=$PATH:$LOCAL_BINS:$GOPATH/bin:$GOROOT/bin:$RUST/bin:$DENO_INSTALL:$BREW:$JAVA_HOME
+export PATH=$JAVA_HOME2:$JAVA_HOME3:$PATH
 # export PATH=$PATH:$YARN_HOME
 
 export VISUAL=nvim

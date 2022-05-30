@@ -7,7 +7,7 @@
 # # "C-S-esc" = "extend_line" # Maps Control-Shift-Escape to extend_line
 # g = { a = "code_action" } # Maps `ga` to show possible code actions
 # "ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
-Z = { Z = ":wq" } # Save and quit
+Z = { Z = ":wq", Q = ":q!" } # Save and quit
 # 
 [keys.insert]
 j = { k = "normal_mode" } # Maps `jk` to exit insert mode

@@ -10,7 +10,7 @@ M.search_zsh = function()
     require("telescope.builtin").find_files({
         hidden = true,
         prompt_title = "< Zsh >",
-        cwd = "$HOME/dotfiles/zsh",
+        cwd = "$HOME/dotfiles/shell",
     })
 end
 

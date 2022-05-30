@@ -1,16 +1,11 @@
 alias ..="cd .."
 alias vim=nvim
-alias editzsh="nvim ~/.zshrc"
-alias starttopo="pushd $HOME/go/src/github.com/cisco-app-networking/wcm-helper && bash test_deployment.sh"
-alias gs="git status"
+alias vi=nvim
 alias x="xclip -selection clipboard"
 alias c="pbcopy"
 alias gitpr="gh pr view --web"
 alias gitweb="gh repo view --web"
-alias minecraft="java -jar ~/Games/minecraft/TLauncher-2.75.jar"
-alias typerace="cd /home/cata/go/src/github.com/catalinux17/typeracer_backend"
 alias clearcache="sudo swapoff -a && swapon -a"
-alias rpd="xmodmap '$HOME/keyboards/manjaro/.Xmodmap'"
 alias ginstall="git clone git@github.com:catalinux17/" # to download repos from catalinux17
 alias colliers_ec2="ssh -i ~/.ssh/colliers.pem ubuntu@3.70.241.115"
 alias pi="ssh cata@192.168.0.150"
@@ -20,6 +15,5 @@ alias pitemp="vcgencmd measure_temp && vcgencmd measure_volts"
 alias ls=exa
 alias grep=rg
 alias cat=bat
-
-alias starvm="sudo systemctl start libvirtd.service"
-alias tema="/home/cata/Documents/teme/iocla/tema3_infernulbiju"
+alias find=fd
+alias sk=sk --preview="bat {} --color=always"
