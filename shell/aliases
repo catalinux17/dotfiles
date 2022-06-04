@@ -2,7 +2,7 @@ alias ..="cd .."
 alias vim=nvim
 alias vi=nvim
 alias x="xclip -selection clipboard"
-alias c="pbcopy"
+alias c=pbcopy
 alias gitpr="gh pr view --web"
 alias gitweb="gh repo view --web"
 alias clearcache="sudo swapoff -a && swapon -a"
@@ -17,3 +17,7 @@ alias grep=rg
 alias cat=bat
 alias find=fd
 alias sk=sk --preview="bat {} --color=always"
+
+alias gs="git status"
+alias py="python3"
+alias venv="source venv/bin/activate"
