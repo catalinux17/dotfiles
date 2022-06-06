@@ -20,3 +20,5 @@ source $EXPORTALIASPATH/exports
 source $EXPORTALIASPATH/aliases
 source ~/.aliases 2> /dev/null
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

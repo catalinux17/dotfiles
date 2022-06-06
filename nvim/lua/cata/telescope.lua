@@ -22,5 +22,11 @@ M.search_dotfiles = function()
     })
 end
 
+M.search_cht = function()
+    require("telescope.builtin").find_files({
+        prompt_title = "< Cht.sh >",
+        cwd = "$HOME/dotfiles/cht/",
+    })
+end
 return M
 
