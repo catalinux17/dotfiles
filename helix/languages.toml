@@ -1,0 +1,11 @@
+
+[[language]]
+name = "python"
+auto-format = true
+
+
+[[language]]
+name = "golang"
+auto-format = true
+
+
