@@ -23,6 +23,7 @@ alias py="python3"
 alias venv="source venv/bin/activate"
 alias hx=helix
 
+
 # cht
 alias cht=./dotfiles/cht/cht.sh
 alias hfzf="history | fzf"
