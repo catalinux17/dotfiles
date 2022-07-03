@@ -14,6 +14,8 @@ export GOPATH=~/gopath
 export GOROOT=~/goroot
 # export GOPRIVATE="github.com/catalinux17"
 
+export HELIX_RUNTIME=~/dotfiles/helix/runtime
+
 export PATH=$PATH:$LOCAL_BINS:$GOPATH/bin:$GOROOT/bin:$RUST/bin:$DENO_INSTALL:$BREW:$JAVA_HOME
 export PATH=$JAVA_HOME2:$JAVA_HOME3:$PATH
 # export PATH=$PATH:$YARN_HOME

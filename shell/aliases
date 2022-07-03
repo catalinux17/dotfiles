@@ -21,6 +21,7 @@ alias sk=sk --preview="bat {} --color=always"
 alias gs="git status"
 alias py="python3"
 alias venv="source venv/bin/activate"
+alias hx=helix
 
 # cht
 alias cht=./dotfiles/cht/cht.sh
