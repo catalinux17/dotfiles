@@ -15,6 +15,7 @@ end
 
 local cmp_status_ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
 if not cmp_status_ok then
+  print 'no cmp_nvim_lsp'
   return
 end
 
