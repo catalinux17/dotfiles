@@ -15,14 +15,17 @@ alias pitemp="vcgencmd measure_temp && vcgencmd measure_volts"
 # rusty
 alias ls=exa
 alias grep=rg
-alias cat=bat
+alias cat2=bat
 alias find=fd
 alias sk=sk --preview="bat {} --color=always"
 
 alias gs="git status"
 alias py="python3"
 alias venv="source venv/bin/activate"
-alias hx=helix
+# alias hx=helix
+
+alias vrc="cd ~/dotfiles/kiss_lua_vim/"
+
 
 
 # cht

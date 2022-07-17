@@ -20,11 +20,12 @@ vim.g.mapleader = ' '
 -- Custom
 
 map({'n', 'v'}, 'U', ':redo<CR>')
+map('n', '<leader>Y', 'ggVG"+y')
 
 
 -- Comment
 
-map({'n', 'v'}, '<C-c>', 'gcc')
+-- map({'n', 'v'}, '<C-c>', 'gcc', { noremap = false })
 
 -- Disable arrow keys
 -- map('', '<up>', '<nop>')
@@ -35,8 +36,8 @@ map({'n', 'v'}, '<C-c>', 'gcc')
 -- Map Esc to kk
 map('i', 'kk', '<Esc>')
 
--- Clear search highlighting with <leader> and c
-map('n', '<leader>c', ':nohl<CR>')
+-- Clear search highlighting with <leader> and h
+map('n', '<leader>h', ':nohl<CR>')
 
 -- Toggle auto-indenting for code paste
 map('n', '<F2>', ':set invpaste paste?<CR>')
@@ -72,11 +73,17 @@ map('t', '<Esc>', '<C-\\><C-n>')                    -- exit
 
 -- NvimTree
 map('n', '<C-b>', ':NvimTreeToggle<CR>')            -- open/close
-map('n', '<leader>f', ':NvimTreeRefresh<CR>')       -- refresh
+map('n', '<C-S-b>', ':NvimTreeRefresh<CR>')       -- refresh
 map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file
 
 -- Tagbar
 map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
+-- map('n', '<leader>h', ':nohlsearch<CR>')
+
+
+map('n', '<leader>gd', ':Gitsigns diffthis<CR>')          -- open/close
+
+
 
 
 map('n', '<leader>f', ':Telescope find_files<CR>')
@@ -90,14 +97,14 @@ map('n', '<leader>tgb', ':Telescope git_branches<CR>')
 
 local telescope_builtin = require'telescope.builtin'
 
-map('n', '<leader>zsh', function()
+map('n', '<leader>VRC', function()
     telescope_builtin.find_files({
     prompt_title = "< VimRC >",
     cwd = "$HOME/dotfiles/kiss_lua_vim/",
 })
 end, {})
 
-map('n', '<leader>zsh', function()
+map('n', '<leader>ZSH', function()
     telescope_builtin.find_files({
     hidden = true,
     prompt_title = "< Zsh >",
@@ -105,7 +112,7 @@ map('n', '<leader>zsh', function()
 })
 end, {})
 
-map('n', '<leader>dot', function()
+map('n', '<leader>DOT', function()
     telescope_builtin.find_files({
         hidden = true,
         prompt_title = "< dotfiles >",
@@ -120,5 +127,4 @@ end, {})
 --     })
 -- end, {})
 
--- return M
 
