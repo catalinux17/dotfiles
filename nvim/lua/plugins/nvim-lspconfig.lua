@@ -125,7 +125,7 @@ end
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches.
 -- Add your language server below:
-local servers = { 'gopls', 'pyright', 'rls' }
+local servers = { 'gopls', 'pyright', 'rls', 'gomod' }
 
 -- Call setup
 for _, lsp in ipairs(servers) do

@@ -15,7 +15,7 @@ end
 nvim_treesitter.setup {
   -- A list of parser names, or "all"
   ensure_installed = {
-    'bash', 'json', 'lua', 'python', 'typescript', 'vim', 'go', 'rust'
+    'bash', 'json', 'lua', 'python', 'typescript', 'vim', 'go', 'rust', 'gomod'
   },
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
