@@ -100,7 +100,7 @@ local telescope_builtin = require'telescope.builtin'
 map('n', '<leader>VRC', function()
     telescope_builtin.find_files({
     prompt_title = "< VimRC >",
-    cwd = "$HOME/dotfiles/kiss_lua_vim/",
+    cwd = "$HOME/dotfiles/nvim/",
 })
 end, {})
 
