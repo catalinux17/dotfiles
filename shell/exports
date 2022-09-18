@@ -24,4 +24,5 @@ export PATH=$JAVA_HOME2:$JAVA_HOME3:$PATH
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
+export FZF_DEFAULT_COMMAND='fd --type f'
 
