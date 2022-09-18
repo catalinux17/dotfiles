@@ -12,11 +12,12 @@ export BREW=/opt/homebrew/bin
 # rm -rf /usr/local/go && tar -C $GOROOT -xzf /mnt/c/Users/Cata/Downloads/go1.17.6.linux-amd64.tar.gz
 export GOPATH=~/gopath
 export GOROOT=~/goroot
+export GOBIN=~/goroot/bin
 # export GOPRIVATE="github.com/catalinux17"
 
 export HELIX_RUNTIME=~/dotfiles/helix/runtime
 
-export PATH=$LOCAL_BINS:$GOPATH/bin:$GOROOT/bin:$RUST/bin:$DENO_INSTALL:$BREW:$JAVA_HOME:$PATH
+export PATH=$LOCAL_BINS:$GOPATH/bin:$GOROOT:$GOBIN:$RUST/bin:$DENO_INSTALL:$BREW:$JAVA_HOME:$PATH
 export PATH=$JAVA_HOME2:$JAVA_HOME3:$PATH
 # export PATH=$PATH:$YARN_HOME
 
