@@ -78,21 +78,23 @@ map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file
 
 -- Tagbar
 map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
--- map('n', '<leader>h', ':nohlsearch<CR>')
 
 
+map({'n', 'i', 'v'}, '<C-s>', '<cmd>w<CR>')          -- save with control + s
 map('n', '<leader>gd', ':Gitsigns diffthis<CR>')          -- open/close
 
 
 
-
+-- Telescope
+map('n', '<leader><space>', ':Telescope find_files<CR>')
 map('n', '<leader>f', ':Telescope find_files<CR>')
 map('n', '<leader>F', ':Telescope grep_string<CR>')
 map('n', '<leader>/', ':Telescope live_grep<CR>')
-map('n', '<leader><space>', ':Telescope find_files<CR>')
 map('n', '<leader>tr', ':Telescope resume<CR>')
 map('n', '<leader>tb', ':Telescope buffers<CR>')
 map('n', '<leader>tgb', ':Telescope git_branches<CR>')
+
+map('n', '<C-/>', 'gcc') -- faster commet
 
 
 local telescope_builtin = require'telescope.builtin'

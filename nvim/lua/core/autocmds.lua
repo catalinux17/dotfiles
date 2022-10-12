@@ -23,6 +23,12 @@ autocmd('BufWritePre', {
   command = ":%s/\\s\\+$//e"
 })
 
+-- Format before saving
+autocmd('BufWritePre', {
+  pattern = '*',
+  command = "lua vim.lsp.buf.format()"
+})
+
 -- Don't auto commenting new lines
 autocmd('BufEnter', {
   pattern = '*',

@@ -33,3 +33,4 @@ alias cht=~/dotfiles/cht/cht.sh
 alias hfzf="history | fzf"
 
 alias lg=lazygit
+alias dot="cd ~/dotfiles"
