@@ -40,8 +40,9 @@ map('i', 'kk', '<Esc>')
 map('n', '<leader>h', ':nohl<CR>')
 
 -- Toggle auto-indenting for code paste
-map('n', '<F2>', ':set invpaste paste?<CR>')
-vim.opt.pastetoggle = '<F2>'
+-- map('n', '<F2>', ':set invpaste paste?<CR>')
+-- vim.opt.pastetoggle = '<F2>'
+
 
 -- Change split orientation
 map('n', '<leader>tk', '<C-w>t<C-w>K') -- change vertical to horizontal
@@ -72,29 +73,31 @@ map('n', '<C-t>', ':Term<CR>', { noremap = true })  -- open
 map('t', '<Esc>', '<C-\\><C-n>')                    -- exit
 
 -- NvimTree
-map('n', '<C-b>', ':NvimTreeToggle<CR>')            -- open/close
-map('n', '<C-S-b>', ':NvimTreeRefresh<CR>')       -- refresh
-map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file
+map('n', '<C-b>', '<cmd>NvimTreeToggle<CR>')            -- open/close
+map('n', '<C-S-b>', '<cmd>NvimTreeRefresh<CR>')       -- refresh
+map('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>')      -- search file
 
 -- Tagbar
-map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
+map('n', '<leader>z', '<cmd>TagbarToggle<CR>')          -- open/close
 
 
 map({'n', 'i', 'v'}, '<C-s>', '<cmd>w<CR>')          -- save with control + s
-map('n', '<leader>gd', ':Gitsigns diffthis<CR>')          -- open/close
+map('n', '<leader>gd', '<cmd>Gitsigns diffthis<CR>')          -- open/close
 
 
 
 -- Telescope
-map('n', '<leader><space>', ':Telescope find_files<CR>')
-map('n', '<leader>f', ':Telescope find_files<CR>')
-map('n', '<leader>F', ':Telescope grep_string<CR>')
-map('n', '<leader>/', ':Telescope live_grep<CR>')
-map('n', '<leader>tr', ':Telescope resume<CR>')
-map('n', '<leader>tb', ':Telescope buffers<CR>')
-map('n', '<leader>tgb', ':Telescope git_branches<CR>')
+map('n', '<leader><space>', '<cmd>Telescope find_files<CR>')
+map('n', '<leader>f', '<cmd>Telescope find_files<CR>')
+map('n', '<leader>F', '<cmd>Telescope grep_string<CR>')
+map('n', '<leader>/', '<cmd>Telescope live_grep<CR>')
+map('n', '<leader>tr', '<cmd>Telescope resume<CR>')
+map('n', '<leader>tb', '<cmd>Telescope buffers<CR>')
+map('n', '<leader>tgb', '<cmd>Telescope git_branches<CR>')
 
 map('n', '<C-/>', 'gcc') -- faster commet
+
+map('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<CR>')
 
 
 local telescope_builtin = require'telescope.builtin'
