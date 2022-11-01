@@ -1,2 +1,4 @@
 .DS_Store
 helix/runtime
+nvim/plugin/packer_compiled.lua
+

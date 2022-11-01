@@ -21,6 +21,7 @@ vim.g.mapleader = ' '
 
 map({'n', 'v'}, 'U', ':redo<CR>')
 map('n', '<leader>Y', 'ggVG"+y')
+map({'n', 'v'}, '<leader>y', '"+y')
 
 
 -- Comment
