@@ -37,3 +37,4 @@ alias lg=lazygit
 alias dot="cd ~/dotfiles"
 
 alias nv=neovide
+alias updaterust="curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
