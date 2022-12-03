@@ -8,4 +8,9 @@ auto-format = true
 name = "golang"
 auto-format = true
 
+[[language]]
+name = "golang"
+auto-format = true
+
+
 
