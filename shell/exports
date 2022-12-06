@@ -1,6 +1,7 @@
 export DENO_INSTALL=~/.deno/bin
 export LOCAL_BINS=~/.local/bin
 export RUSTBIN=~/.cargo/bin
+export RUSTUPBIN="~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin"
 # export YARN_HOME=$(yarn global bin)
 
 export JAVA_HOME=/usr/local/opt/openjdk/bin
@@ -17,7 +18,7 @@ export GOBIN=~/goroot/bin
 
 export HELIX_RUNTIME=~/dotfiles/helix/runtime
 
-export PATH=$LOCAL_BINS:$GOPATH/bin:$GOROOT:$GOBIN:$RUST:$DENO_INSTALL:$BREW:$JAVA_HOME:$PATH
+export PATH=$LOCAL_BINS:$GOPATH/bin:$GOROOT:$GOBIN:$RUSTBIN:$RUSTUPBIN:$DENO_INSTALL:$BREW:$JAVA_HOME:$PATH
 export PATH=$JAVA_HOME2:$JAVA_HOME3:$PATH
 # export PATH=$PATH:$YARN_HOME
 

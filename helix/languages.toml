@@ -16,4 +16,8 @@ file-types = ["go", "gomod"]
 auto-format = true
 
 
+[[language]]
+name = "rust"
 
+[language.config]
+checkOnSave = { command = "clippy" }
