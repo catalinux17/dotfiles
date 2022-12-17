@@ -1,5 +1,5 @@
 # Note: this key must come **before** the [[language]] and [[grammar]] sections
-use-grammars = { only = [ "go", "python", "rust" ], except = [] }
+use-grammars = { only = ["go", "python", "rust"], except = [] }
 
 
 [[language]]
@@ -11,7 +11,7 @@ auto-format = true
 [[language]]
 name = "golang"
 # scope = "main.go"
-roots = [ "go.mod", "go.sum" ]
+roots = ["go.mod", "go.sum"]
 file-types = ["go", "gomod"]
 auto-format = true
 
