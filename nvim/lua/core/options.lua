@@ -10,6 +10,11 @@ local g = vim.g       -- Global variables
 local opt = vim.opt   -- Set options (global/buffer/windows-scoped)
 
 -----------------------------------------------------------
+-- Custom
+-----------------------------------------------------------
+opt.signcolumn = 'yes'
+
+-----------------------------------------------------------
 -- General
 -----------------------------------------------------------
 opt.mouse = 'a'                       -- Enable mouse support
@@ -20,10 +25,11 @@ opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------
-opt.number = true           -- Show line number
+opt.nu = true           -- Show line number
+opt.rnu = true           -- Show line number
 opt.showmatch = true        -- Highlight matching parenthesis
 opt.foldmethod = 'marker'   -- Enable folding (default 'foldmarker')
-opt.colorcolumn = '80'      -- Line lenght marker at 80 columns
+opt.colorcolumn = '100'      -- Line lenght marker at 80 columns
 opt.splitright = true       -- Vertical split to the right
 opt.splitbelow = true       -- Horizontal split to the bottom
 opt.ignorecase = true       -- Ignore case letters when search

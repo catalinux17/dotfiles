@@ -5,7 +5,8 @@ line-number = "relative"
 
 # # At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
 [keys.normal]
-C-s = ":w"                                                                                                                                                   # Maps the Control-s to the typable command :w which is an alias for :write (save file)
+C-s = ":w"
+C-S = ":write-all"                                                                                                                                           # Maps the Control-s to the typable command :w which is an alias for :write (save file)
 "backspace" = { c = ":config-open", r = ":config-reload", g = ":sh go run main.go", l = ":open ~/dotfiles/helix/languages.toml", p = ":sh python3 main.py" }
 # # a = "move_char_left" # Maps the 'a' key to the move_char_left command
 # # w = "move_line_up" # Maps the 'w' key move_line_up

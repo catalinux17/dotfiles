@@ -103,14 +103,14 @@ map('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<CR>')
 
 local telescope_builtin = require'telescope.builtin'
 
-map('n', '<leader>VRC', function()
+map('n', '<leader>dv', function()
     telescope_builtin.find_files({
     prompt_title = "< VimRC >",
     cwd = "$HOME/dotfiles/nvim/",
 })
 end, {})
 
-map('n', '<leader>ZSH', function()
+map('n', '<leader>ds', function()
     telescope_builtin.find_files({
     hidden = true,
     prompt_title = "< Zsh >",
@@ -118,7 +118,7 @@ map('n', '<leader>ZSH', function()
 })
 end, {})
 
-map('n', '<leader>DOT', function()
+map('n', '<leader>dd', function()
     telescope_builtin.find_files({
         hidden = true,
         prompt_title = "< dotfiles >",
