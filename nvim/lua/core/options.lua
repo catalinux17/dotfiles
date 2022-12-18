@@ -22,6 +22,18 @@ opt.clipboard = 'unnamedplus'         -- Copy/paste to system clipboard
 opt.swapfile = false                  -- Don't use swapfile
 opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
 
+
+-----------------------------------------------------------
+-- Custom
+-----------------------------------------------------------
+opt.backup = false
+opt.undodir = os.getenv('HOME') .. '/.vim/undodir'
+opt.undofile = true
+opt.signcolumn = 'yes'
+opt.hlsearch = false
+opt.incsearch = true
+
+
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------

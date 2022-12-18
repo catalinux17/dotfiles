@@ -15,10 +15,11 @@ end
 nvim_treesitter.setup {
   -- A list of parser names, or "all"
   ensure_installed = {
-    'bash', 'json', 'lua', 'python', 'typescript', 'vim', 'go', 'rust', 'gomod'
+    'bash', 'json', 'lua', 'python', 'typescript', 'vim', 'go', 'rust', 'gomod', 'help'
   },
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = true,
+  auto_install = true,
   highlight = {
     -- `false` will disable the whole extension
     enable = true,
@@ -98,8 +99,8 @@ nvim_treesitter.setup {
       enable = true,
       border = 'none',
       peek_definition_code = {
-        ["<leader>df"] = "@function.outer",
-        ["<leader>dF"] = "@class.outer",
+        ["<leader>Df"] = "@function.outer",
+        ["<leader>Dc"] = "@class.outer",
       },
     },
   }

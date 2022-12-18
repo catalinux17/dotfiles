@@ -10,7 +10,7 @@ local function map(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, options)
 end
 
--- Change leader to a comma
+-- Change leader to a space
 vim.g.mapleader = ' '
 
 -----------------------------------------------------------
@@ -20,9 +20,11 @@ vim.g.mapleader = ' '
 -- Custom
 
 map({'n', 'v'}, 'U', ':redo<CR>')
-map('n', '<leader>Y', 'ggVG"+y')
+map('n', '<leader>Y', 'mzggVG"+y`z')
 map({'n', 'v'}, '<leader>y', '"+y')
 
+map('v', 'J', ":m '>+1<CR>gv=gv")
+map('v', 'K', ":m '>-2<CR>gv=gv")
 
 -- Comment
 
@@ -35,7 +37,7 @@ map({'n', 'v'}, '<leader>y', '"+y')
 -- map('', '<right>', '<nop>')
 
 -- Map Esc to kk
-map('i', 'kk', '<Esc>')
+-- map('i', 'kk', '<Esc>')
 
 -- Clear search highlighting with <leader> and h
 map('n', '<leader>h', ':nohl<CR>')
@@ -101,7 +103,11 @@ map('n', '<C-/>', 'gcc') -- faster commet
 map('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<CR>')
 
 
-local telescope_builtin = require'telescope.builtin'
+local ok, telescope_builtin = pcall(require, 'telescope.builtin')
+if ok then
+  map('n', '<leader>m', '<cmd>Telescope marks<CR>')
+  map('n', '<leader>b', '<cmd>Telescope buffers<CR>')
+  map('n', '<leader><leader>', '<cmd>Telescope resume<CR>')
 
 map('n', '<leader>dv', function()
     telescope_builtin.find_files({
@@ -126,11 +132,12 @@ map('n', '<leader>dd', function()
     })
 end, {})
 
--- map('n', '<leader>cht', function()
---     telescope_builtin.find_files({
---         prompt_title = "< Cht.sh >",
---         cwd = "$HOME/dotfiles/cht",
---     })
--- end, {})
+  -- map('n', '<leader>cht', function()
+  --     telescope_builtin.find_files({
+  --         prompt_title = "< Cht.sh >",
+  --         cwd = "$HOME/dotfiles/cht",
+  --     })
+  -- end, {})
 
 
+end
