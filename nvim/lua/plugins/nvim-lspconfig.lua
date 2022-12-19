@@ -95,6 +95,7 @@ local on_attach = function(client, bufnr)
 
     buf_set_keymap('n', '<leader>d', '<cmd>Telescope diagnostics<CR>', opts)
     buf_set_keymap('n', '<leader>s', '<cmd>Telescope lsp_document_symbols<CR>', opts)
+    buf_set_keymap('n', '<leader>S', '<cmd>Telescope lsp_workspace_symbols<CR>', opts)
 
   else
     buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)

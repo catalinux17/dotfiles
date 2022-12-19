@@ -107,16 +107,17 @@ local ok, telescope_builtin = pcall(require, 'telescope.builtin')
 if ok then
   map('n', '<leader>m', '<cmd>Telescope marks<CR>')
   map('n', '<leader>b', '<cmd>Telescope buffers<CR>')
+  map('n', '<leader>?', '<cmd>Telescope keymaps<CR>')
   map('n', '<leader><leader>', '<cmd>Telescope resume<CR>')
 
-map('n', '<leader>dv', function()
+map('n', '<leader>xv', function()
     telescope_builtin.find_files({
     prompt_title = "< VimRC >",
     cwd = "$HOME/dotfiles/nvim/",
 })
 end, {})
 
-map('n', '<leader>ds', function()
+map('n', '<leader>xs', function()
     telescope_builtin.find_files({
     hidden = true,
     prompt_title = "< Zsh >",
@@ -124,7 +125,7 @@ map('n', '<leader>ds', function()
 })
 end, {})
 
-map('n', '<leader>dd', function()
+map('n', '<leader>xd', function()
     telescope_builtin.find_files({
         hidden = true,
         prompt_title = "< dotfiles >",
