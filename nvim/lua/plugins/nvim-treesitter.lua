@@ -24,6 +24,19 @@ nvim_treesitter.setup {
     -- `false` will disable the whole extension
     enable = true,
   },
+  indent = {
+    enable = true
+  },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = '<c-space>',
+      node_incremental = '<c-space>',
+      -- init_selection = '<c-space>',
+      node_decremental = '<c-backspace>',
+    },
+  },
+
   textobjects = {
     select = {
       enable = true,
