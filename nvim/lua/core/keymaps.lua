@@ -1,13 +1,15 @@
 -----------------------------------------------------------
 -- Define keymaps of Neovim and installed plugins.
 -----------------------------------------------------------
-
 local function map(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
-  if opts then
-    options = vim.tbl_extend('force', options, opts)
-  end
-  vim.keymap.set(mode, lhs, rhs, options)
+    local options = {
+        noremap = true,
+        silent = true
+    }
+    if opts then
+        options = vim.tbl_extend('force', options, opts)
+    end
+    vim.keymap.set(mode, lhs, rhs, options)
 end
 
 -- Change leader to a space
@@ -46,7 +48,6 @@ map('n', '<leader>h', ':nohl<CR>')
 -- map('n', '<F2>', ':set invpaste paste?<CR>')
 -- vim.opt.pastetoggle = '<F2>'
 
-
 -- Change split orientation
 map('n', '<leader>tk', '<C-w>t<C-w>K') -- change vertical to horizontal
 map('n', '<leader>th', '<C-w>t<C-w>H') -- change horizontal to vertical
@@ -72,22 +73,21 @@ map('n', '<leader>s', ':w<CR>')
 -----------------------------------------------------------
 
 -- Terminal mappings
-map('n', '<C-t>', ':Term<CR>', { noremap = true })  -- open
-map('t', '<Esc>', '<C-\\><C-n>')                    -- exit
+map('n', '<C-t>', ':Term<CR>', {
+    noremap = true
+}) -- open
+map('t', '<Esc>', '<C-\\><C-n>') -- exit
 
 -- NvimTree
-map('n', '<C-b>', '<cmd>NvimTreeToggle<CR>')            -- open/close
-map('n', '<C-S-b>', '<cmd>NvimTreeRefresh<CR>')       -- refresh
-map('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>')      -- search file
+map('n', '<C-b>', '<cmd>NvimTreeToggle<CR>') -- open/close
+map('n', '<C-S-b>', '<cmd>NvimTreeRefresh<CR>') -- refresh
+map('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>') -- search file
 
 -- Tagbar
-map('n', '<leader>z', '<cmd>TagbarToggle<CR>')          -- open/close
+map('n', '<leader>z', '<cmd>TagbarToggle<CR>') -- open/close
 
-
-map({'n', 'i', 'v'}, '<C-s>', '<cmd>w<CR>')          -- save with control + s
-map('n', '<leader>gd', '<cmd>Gitsigns diffthis<CR>')          -- open/close
-
-
+map({'n', 'i', 'v'}, '<C-s>', '<cmd>w<CR>') -- save with control + s
+map('n', '<leader>gd', '<cmd>Gitsigns diffthis<CR>') -- open/close
 
 -- Telescope
 map('n', '<leader><space>', '<cmd>Telescope find_files<CR>')
@@ -102,43 +102,41 @@ map('n', '<C-/>', 'gcc') -- faster commet
 
 map('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<CR>')
 
-
 local ok, telescope_builtin = pcall(require, 'telescope.builtin')
 if ok then
-  map('n', '<leader>m', '<cmd>Telescope marks<CR>')
-  map('n', '<leader>b', '<cmd>Telescope buffers<CR>')
-  map('n', '<leader>?', '<cmd>Telescope keymaps<CR>')
-  map('n', '<leader><leader>', '<cmd>Telescope resume<CR>')
+    map('n', '<leader>m', '<cmd>Telescope marks<CR>')
+    map('n', '<leader>b', '<cmd>Telescope buffers<CR>')
+    map('n', '<leader>?', '<cmd>Telescope keymaps<CR>')
+    map('n', '<leader><leader>', '<cmd>Telescope resume<CR>')
 
-map('n', '<leader>xv', function()
-    telescope_builtin.find_files({
-    prompt_title = "< VimRC >",
-    cwd = "$HOME/dotfiles/nvim/",
-})
-end, {})
+    map('n', '<leader>xv', function()
+        telescope_builtin.find_files({
+            prompt_title = "< VimRC >",
+            cwd = "$HOME/dotfiles/nvim/"
+        })
+    end, {})
 
-map('n', '<leader>xs', function()
-    telescope_builtin.find_files({
-    hidden = true,
-    prompt_title = "< Zsh >",
-    cwd = "$HOME/dotfiles/shell",
-})
-end, {})
+    map('n', '<leader>xs', function()
+        telescope_builtin.find_files({
+            hidden = true,
+            prompt_title = "< Zsh >",
+            cwd = "$HOME/dotfiles/shell"
+        })
+    end, {})
 
-map('n', '<leader>xd', function()
-    telescope_builtin.find_files({
-        hidden = true,
-        prompt_title = "< dotfiles >",
-        cwd = "$HOME/dotfiles",
-    })
-end, {})
+    map('n', '<leader>xd', function()
+        telescope_builtin.find_files({
+            hidden = true,
+            prompt_title = "< dotfiles >",
+            cwd = "$HOME/dotfiles"
+        })
+    end, {})
 
-  -- map('n', '<leader>cht', function()
-  --     telescope_builtin.find_files({
-  --         prompt_title = "< Cht.sh >",
-  --         cwd = "$HOME/dotfiles/cht",
-  --     })
-  -- end, {})
-
+    -- map('n', '<leader>cht', function()
+    --     telescope_builtin.find_files({
+    --         prompt_title = "< Cht.sh >",
+    --         cwd = "$HOME/dotfiles/cht",
+    --     })
+    -- end, {})
 
 end
