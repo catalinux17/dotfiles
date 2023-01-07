@@ -10,7 +10,7 @@ auto-format = true
 
 [[language]]
 name = "golang"
-# scope = "main.go"
+scope = "main.go"
 roots = ["go.mod", "go.sum"]
 file-types = ["go", "gomod"]
 auto-format = true
