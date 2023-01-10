@@ -2,6 +2,15 @@ theme = "catppuccin_mocha"
 
 [editor]
 line-number = "relative"
+auto-format = true
+auto-save = true
+rulers = [ 100 ]
+color-modes = true
+true-color = true
+bufferline = "multiple"
+scrolloff = 8 
+scroll-lines = 5
+# shell = [ "zsh" "-c" ]
 
 # # At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
 [keys.normal]
