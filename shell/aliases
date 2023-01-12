@@ -38,3 +38,7 @@ alias dot="cd ~/dotfiles"
 alias nv=neovide
 alias updaterust="curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
 alias dirvim="cd ~/dotfiles/nvim/"
+
+alias hx=helix
+alias h=helix
+alias z=zellij

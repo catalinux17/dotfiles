@@ -29,4 +29,3 @@ Z = { Z = ":wq", Q = ":q!" } # Save and quit
 # 
 [keys.insert]
 C-s = ":w"
-j = { k = "normal_mode" } # Maps `jk` to exit insert mode
