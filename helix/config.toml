@@ -17,15 +17,27 @@ display-messages = true
 
 # # At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
 [keys.normal]
+G = "goto_file_end"
+X = "extend_line_above"
+ret = ["move_line_down", "goto_line_start"]
 C-s = ":w"
-C-S = ":write-all"                                                                                                                                           # Maps the Control-s to the typable command :w which is an alias for :write (save file)
+C-S = ":write-all"
 "backspace" = { c = ":config-open", r = ":config-reload", g = ":sh go run main.go", l = ":open ~/dotfiles/helix/languages.toml", p = ":sh python3 main.py" }
-# # a = "move_char_left" # Maps the 'a' key to the move_char_left command
-# # w = "move_line_up" # Maps the 'w' key move_line_up
-# # "C-S-esc" = "extend_line" # Maps Control-Shift-Escape to extend_line
-# g = { a = "code_action" } # Maps `ga` to show possible code actions
-# "ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
 Z = { Z = ":wq", Q = ":q!" } # Save and quit
-# 
+
+# move line around
+C-j = [ "delete_selection", "move_line_down", "paste_before" ]
+C-k = [ "delete_selection", "move_line_up", "paste_before" ]
+
+# move around splits
+C-h = "jump_view_left"
+C-l = "jump_view_right"
+
+[keys.normal.space]
+q = ":q"
+w = ":w"
+
+
 [keys.insert]
 C-s = ":w"
+
