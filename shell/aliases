@@ -17,7 +17,7 @@ alias pitemp="vcgencmd measure_temp && vcgencmd measure_volts"
 alias ls=exa
 alias grep=rg
 alias cat2=bat
-alias sk=sk --preview="bat {} --color=always"
+alias sk='sk --preview="bat {} --color=always"'
 
 alias gs="git status"
 alias py="python3"
@@ -39,6 +39,8 @@ alias nv=neovide
 alias updaterust="curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
 alias dirvim="cd ~/dotfiles/nvim/"
 
-alias hx=helix
+# alias hx=helix
 alias h=helix
 alias z=zellij
+
+alias lll="exa -T -L 2"

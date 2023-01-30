@@ -20,10 +20,10 @@ display-messages = true
 G = "goto_file_end"
 X = "extend_line_above"
 ret = ["move_line_down", "goto_line_start"]
-C-s = ":w"
+C-s = [ "save_selection", ":w" ]
 C-S = ":write-all"
-"backspace" = { c = ":config-open", r = ":config-reload", g = ":sh go run main.go", l = ":open ~/dotfiles/helix/languages.toml", p = ":sh python3 main.py" }
 Z = { Z = ":wq", Q = ":q!" } # Save and quit
+"+" = "repeat_last_motion"
 
 # move line around
 C-j = [ "delete_selection", "move_line_down", "paste_before" ]
@@ -32,6 +32,16 @@ C-k = [ "delete_selection", "move_line_up", "paste_before" ]
 # move around splits
 C-h = "jump_view_left"
 C-l = "jump_view_right"
+
+[keys.normal.backspace]
+c = ":config-open"
+r = ":config-reload"
+g = ":sh go run main.go"
+l = ":open ~/dotfiles/helix/languages.toml"
+p = ":sh python3 main.py"
+a = ":open ~/dotfiles/shell/aliases"
+e = ":open ~/dotfiles/shell/exports"
+
 
 [keys.normal.space]
 q = ":q"
