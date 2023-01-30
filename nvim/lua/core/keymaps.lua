@@ -25,6 +25,8 @@ map({'n', 'v'}, 'U', ':redo<CR>')
 map('n', '<leader>Y', 'mzggVG"+y`z')
 map({'n', 'v'}, '<leader>y', '"+y')
 
+map('n', '<leader>L', '<cmd>Lazy<CR>')
+
 map('v', 'J', ":m '>+1<CR>gv=gv")
 map('v', 'K', ":m '>-2<CR>gv=gv")
 
@@ -79,9 +81,9 @@ map('n', '<C-t>', ':Term<CR>', {
 map('t', '<Esc>', '<C-\\><C-n>') -- exit
 
 -- NvimTree
-map('n', '<C-b>', '<cmd>NvimTreeToggle<CR>') -- open/close
-map('n', '<C-S-b>', '<cmd>NvimTreeRefresh<CR>') -- refresh
-map('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>') -- search file
+map('n', '<C-b>', '<cmd>NeoTreeShowToggle<CR>') -- open/close
+-- map('n', '<C-S-b>', '<cmd>NvimTreeRefresh<CR>') -- refresh
+-- map('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>') -- search file
 
 -- Tagbar
 map('n', '<leader>z', '<cmd>TagbarToggle<CR>') -- open/close
