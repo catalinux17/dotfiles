@@ -35,7 +35,8 @@ C-l = "jump_view_right"
 
 [keys.normal.backspace]
 c = ":config-open"
-r = ":config-reload"
+R = ":config-reload"
+r = ":sh cargo run"
 g = ":sh go run main.go"
 l = ":open ~/dotfiles/helix/languages.toml"
 p = ":sh python3 main.py"

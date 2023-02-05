@@ -12,5 +12,5 @@ return {
   -- LSP
   'neovim/nvim-lspconfig',
 
-  "kylechui/nvim-surround",
+  'kylechui/nvim-surround',
 }

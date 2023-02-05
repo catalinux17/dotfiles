@@ -294,7 +294,6 @@ feline.setup {
     components = components,
     vi_mode_colors = vi_mode_colors,
     force_inactive = {
-        filetypes = {'^NvimTree$', '^packer$', '^vista$', '^help$'},
         buftypes = {'^terminal$'},
         bufnames = {}
     }
