@@ -3,6 +3,25 @@ use-grammars = { only = ["go", "python", "rust"], except = [] }
 
 
 
+auto-format = true
+
+
+[[language]]
+name = "python"
+scope = "source.python"
+injection-regex = "python"
+file-types = ["py","pyi","py3","pyw","ptl",".pythonstartup",".pythonrc","SConstruct"]
+shebangs = ["python"]
+roots = []
+comment-token = "#"
+language-server = { command = "pylsp" }
+# TODO: pyls needs utf-8 offsets
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+
+[[grammar]]
+name = "python"
+source = { git = "https://github.com/tree-sitter/tree-sitter-python", rev = "de221eccf9a221f5b85474a553474a69b4b5784d" }
 
 
 
