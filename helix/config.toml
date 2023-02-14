@@ -47,6 +47,7 @@ e = ":open ~/dotfiles/shell/exports"
 [keys.normal.space]
 q = ":q"
 w = ":w"
+"space" = ["last_picker"]
 
 
 [keys.insert]

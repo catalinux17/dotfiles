@@ -1,6 +1,6 @@
 # Note: this key must come **before** the [[language]] and [[grammar]] sections
 use-grammars = {
-  only = ["go", "python", "rust", "svelte", "json", "javascript", "jsx", "typescript", "html", "css"],
+  only = ["go", "python", "rust", "svelte", "json", "javascript", "jsx", "typescript", "html", "css", "toml"],
   except = []
 }
 
