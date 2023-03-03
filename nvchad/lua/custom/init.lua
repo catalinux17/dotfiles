@@ -34,3 +34,17 @@ autocmd('BufWritePre', {
     command = "lua vim.lsp.buf.format()"
 })
 
+local opt = vim.opt
+
+opt.shiftwidth = 4
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.numberwidth = 2
+opt.timeoutlen = 1000
+opt.hidden = true           -- Enable background buffers
+opt.history = 100           -- Remember N lines in history
+opt.lazyredraw = true       -- Faster scrolling
+opt.synmaxcol = 240         -- Max column for syntax highlight
+opt.swapfile = false
+opt.colorcolumn = '100'
+
