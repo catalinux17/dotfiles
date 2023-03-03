@@ -5,9 +5,9 @@ export RUSTUPBIN="~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin"
 export RUSTUPBINMAC=~/.rustup/toolchains/stable-aarch64-apple-darwin/bin
 # export YARN_HOME=$(yarn global bin)
 
-export JAVA_HOME=/usr/local/opt/openjdk/bin
-export JAVA_HOME2=/opt/homebrew/opt/openjdk/bin
-export JAVA_HOME3=~/.local/bin/openjdk/bin
+# export JAVA_HOME=/usr/local/opt/openjdk/bin
+# export JAVA_HOME2=/opt/homebrew/opt/openjdk/bin
+# export JAVA_HOME3=~/.local/bin/openjdk/bin
 export BREW=/opt/homebrew/bin
 
 # install go
@@ -18,8 +18,9 @@ export GOBIN=~/goroot/bin
 # export GOPRIVATE="github.com/catalinux17"
 
 export HELIX_RUNTIME=~/dotfiles/helix/runtime
+export MASON=~/.local/share/nvim/mason/bin
 
-export PATH=$LOCAL_BINS:$GOPATH/bin:$GOROOT:$GOBIN:$RUSTBIN:$RUSTUPBIN:$RUSTUPBINMAC:$DENO_INSTALL:$BREW:$JAVA_HOME:$PATH
+export PATH=$LOCAL_BINS:$GOPATH/bin:$GOROOT:$GOBIN:$RUSTBIN:$RUSTUPBIN:$RUSTUPBINMAC:$DENO_INSTALL:$BREW:$JAVA_HOME:$MASON:$PATH
 export PATH=$JAVA_HOME2:$JAVA_HOME3:$PATH
 # export PATH=$PATH:$YARN_HOME
 

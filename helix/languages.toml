@@ -17,7 +17,8 @@ file-types = ["py","pyi","py3","pyw","ptl",".pythonstartup",".pythonrc","SConstr
 shebangs = ["python"]
 roots = []
 comment-token = "#"
-language-server = { command = "pylsp" }
+language-server = { command = "pyright-langserver", args = ["--stdio"] }
+
 # TODO: pyls needs utf-8 offsets
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
