@@ -26,11 +26,14 @@ M.general = {
         ["<leader>fr"] = { "<cmd>Telescope lsp_references<CR>", "telescope: find all references" },
         ["<leader><leader>"] = { "<cmd>Telescope resume<CR>", "resume telescope"},
         ["<F2>"] = { "<cmd>lua vim.lsp.buf.rename()<CR>", "fast rename" },
+        ["<leader>/"] = { "<cmd>Telescope live_grep<CR>", "live grep current dir" }
     },
     v = {
         ["<leader>y"] = { '"+y', "copy to clipboard" },
         ["J"] = { ":m '>+1<CR>gv=gv", "move line up" },
         ["K"] = { ":m '>-2<CR>gv=gv", "move line down" },
+        ["<C-/>"] = { "<cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", "comment line" },
+        ["<leader>F"] = { "<cmd>vim.lsp.buf.format { async = true }<CR>", "format current file" },
     },
     t = {
         ["<M-j>"] = { function ()
