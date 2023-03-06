@@ -1,7 +1,5 @@
 local overrides = require("custom.plugins.overrides")
 
-print("in overrides")
-
 ---@type NvPluginsTable
 local plugins = {
     -- Override plugin definition options
@@ -54,6 +52,15 @@ local plugins = {
             })
             -- You probably also want to set a keymap to toggle aerial
             vim.keymap.set('n', '<leader>:', '<cmd>AerialToggle!<CR>')
+        end
+    },
+    ["nvim-treesitter/nvim-treesitter-textobjects"] = {
+        config = function()
+            local overrides2 = require("custom.plugins.overrides")
+            require("nvim-treesitter.configs").setup({
+                incremental_selection = overrides2.treesitter_textobject.incremental_selection,
+                textobjects = overrides2.treesitter_textobject.textobjects
+            })
         end
     }
     -- remove plugin

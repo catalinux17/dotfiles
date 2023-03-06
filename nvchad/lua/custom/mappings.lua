@@ -4,29 +4,45 @@ local M = {}
 M.general = {
     n = {
         [";"] = { ":", "enter command mode", opts = { nowait = true } },
-        ["<leader>Y"] = { 'mzggVG"+y`z', "copy whole file and don't change position" },
         ["<backspace>L"] = { "<cmd>Lazy<CR>", "dashboard for Lazy" },
         ["<backspace>P"] = { "<cmd>PackerSync<CR>", "dashboard for Packer" },
         ["<backspace>M"] = { "<cmd>Mason<CR>", "dashboard for Mason" },
-        ["<backspace>a"] = { "<cmd>Telescope find_files search_dirs=~/dotfiles/nvchad/lua/<CR>", "settings: find files" },
-        ["<backspace>A"] = { "<cmd>Telescope live_grep search_dirs=~/dotfiles/nvchad/lua/<CR>", "settings: live grep" },
-        ["<backspace>b"] = { "<cmd>Telescope find_files search_dirs=~/.config/nvim<CR>", "settings: find files" },
-        ["<backspace>B"] = { "<cmd>Telescope live_grep search_dirs=~/.config/nvim<CR>", "settings: live grep" },
         ["<leader>h"] = { "<cmd>nohl<CR>", "no highlight" },
-        ["<leader>?"] = { "<cmd>Telescope keymaps<CR>", "show all keymaps" },
         ["<C-/>"] = { "<cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", "comment line" },
+        ["<C-c>"] = { "<cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", "comment line" },
         ["U"] = { "<cmd>redo<CR>", "redo" },
         ["<M-j>"] = { function ()
             require("nvterm.terminal").toggle "float"
           end,
           "toggle floating term",
         },
+        ["<F2>"] = { "<cmd>lua vim.lsp.buf.rename()<CR>", "fast rename" },
+        ["<M-d>"] = { "<cmd>lua vim.diagnostic.open_float()<CR>", "open diagnostic in float" },
+        ["<leader>Y"] = { "<cmd>%y+<CR>", "copy whole file" },
+        ["<leader>C"] = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "lsp: code action" },
+        ["gd"] = { "<cmd>lua vim.lsp.buf.definition()<CR>", "lsp: definition" },
+        ["<F7>"] = { "<cmd>lua vim.diagnostic.goto_prev()<CR>", "go to prev diag" },
+        ["<F8>"] = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "go to next diag" },
+        ["<M-b>"] = { "<cmd>lua vim.diagnostic.goto_prev()<CR>", "go to prev diag" },
+        ["<M-m>"] = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "go to next diag" },
+        ["<F4>"] = { "<cmd>only<bar>vsplit<CR>gd", "open definition in split" },
+
+        -- Telescope
+        ["<leader>D"] = { "<cmd>Telescope diagnostics<CR>", "show all diagnostics" },
+        ["<backspace>a"] = { "<cmd>Telescope find_files search_dirs=~/dotfiles/nvchad/lua/<CR>", "settings: find files" },
+        ["<backspace>A"] = { "<cmd>Telescope live_grep search_dirs=~/dotfiles/nvchad/lua/<CR>", "settings: live grep" },
+        ["<backspace>b"] = { "<cmd>Telescope find_files search_dirs=~/.config/nvim<CR>", "settings: find files" },
+        ["<backspace>B"] = { "<cmd>Telescope live_grep search_dirs=~/.config/nvim<CR>", "settings: live grep" },
+        ["<leader>/"] = { "<cmd>Telescope live_grep<CR>", "live grep current dir" },
+        ["<leader>b"] = { "<cmd>Telescope buffers<CR>", "get all buffers" },
+        ["<C-S-P>"] = { "<cmd>Telescope buffers<CR>", "get all buffers" },
         ["<leader>fw"] = { "<cmd>Telescope grep_string<CR>", "telescope: find word under cursor" },
         ["<F3>"] = { "<cmd>Telescope grep_string<CR>", "telescope: find word under cursor" },
-        ["<leader>fr"] = { "<cmd>Telescope lsp_references<CR>", "telescope: find all references" },
+        ["gr"] = { "<cmd>Telescope lsp_references<CR>", "telescope: find all references", opts = { noremap = true } },
         ["<leader><leader>"] = { "<cmd>Telescope resume<CR>", "resume telescope"},
-        ["<F2>"] = { "<cmd>lua vim.lsp.buf.rename()<CR>", "fast rename" },
-        ["<leader>/"] = { "<cmd>Telescope live_grep<CR>", "live grep current dir" }
+        ["<leader>?"] = { "<cmd>Telescope keymaps<CR>", "show all keymaps" },
+        ["<leader>F"] = { "<cmd>Telescope find_files<CR>", "find files in the current directory" },
+        ["<C-p>"] = { "<cmd>Telescope find_files<CR>", "find files in the current directory" },
     },
     v = {
         ["<leader>y"] = { '"+y', "copy to clipboard" },
@@ -46,103 +62,5 @@ M.general = {
         ["<C-s>"] = { "<esc>:w<CR>i", "save file" },
     }
 }
--- map('n', '<leader>h', ':nohl<CR>')
-
--- Toggle auto-indenting for code paste
--- map('n', '<F2>', ':set invpaste paste?<CR>')
--- vim.opt.pastetoggle = '<F2>'
-
--- -- Change split orientation
--- map('n', '<leader>tk', '<C-w>t<C-w>K') -- change vertical to horizontal
--- map('n', '<leader>th', '<C-w>t<C-w>H') -- change horizontal to vertical
-
--- -- Move around splits using Ctrl + {h,j,k,l}
--- map('n', '<C-h>', '<C-w>h')
--- map('n', '<C-j>', '<C-w>j')
--- map('n', '<C-k>', '<C-w>k')
--- map('n', '<C-l>', '<C-w>l')
-
--- -- Reload configuration without restart nvim
--- map('n', '<leader>r', ':so %<CR>')
-
--- -- Fast saving with <leader> and s
--- map('n', '<leader>s', ':w<CR>')
--- -- map('i', '<leader>s', '<C-c>:w<CR>')
-
--- -- Close all windows and exit from Neovim with <leader> and q
--- -- map('n', '<leader>q', ':qa!<CR>')
-
--- -----------------------------------------------------------
--- -- Applications and Plugins shortcuts
--- -----------------------------------------------------------
-
--- -- Terminal mappings
--- map('n', '<C-t>', ':Term<CR>', {
---     noremap = true
--- }) -- open
--- map('t', '<Esc>', '<C-\\><C-n>') -- exit
-
--- -- NvimTree
--- map('n', '<C-b>', '<cmd>NeoTreeShowToggle<CR>') -- open/close
--- -- map('n', '<C-S-b>', '<cmd>NvimTreeRefresh<CR>') -- refresh
--- -- map('n', '<leader>n', '<cmd>NvimTreeFindFile<CR>') -- search file
-
--- -- Tagbar
--- map('n', '<leader>z', '<cmd>TagbarToggle<CR>') -- open/close
-
--- map({'n', 'i', 'v'}, '<C-s>', '<cmd>w<CR>') -- save with control + s
--- map('n', '<leader>gd', '<cmd>Gitsigns diffthis<CR>') -- open/close
-
--- -- Telescope
--- map('n', '<leader><space>', '<cmd>Telescope find_files<CR>')
--- map('n', '<leader>f', '<cmd>Telescope find_files<CR>')
--- map('n', '<leader>F', '<cmd>Telescope grep_string<CR>')
--- map('n', '<leader>/', '<cmd>Telescope live_grep<CR>')
--- map('n', '<leader>tr', '<cmd>Telescope resume<CR>')
--- map('n', '<leader>tb', '<cmd>Telescope buffers<CR>')
--- map('n', '<leader>tgb', '<cmd>Telescope git_branches<CR>')
-
--- map('n', '<C-/>', 'gcc') -- faster commet
-
--- map('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<CR>')
-
--- local ok, telescope_builtin = pcall(require, 'telescope.builtin')
--- if ok then
---     map('n', '<leader>m', '<cmd>Telescope marks<CR>')
---     map('n', '<leader>b', '<cmd>Telescope buffers<CR>')
---     map('n', '<leader>?', '<cmd>Telescope keymaps<CR>')
---     map('n', '<leader><leader>', '<cmd>Telescope resume<CR>')
-
---     map('n', '<leader>xv', function()
---         telescope_builtin.find_files({
---             prompt_title = "< VimRC >",
---             cwd = "$HOME/dotfiles/nvim/"
---         })
---     end, {})
-
---     map('n', '<leader>xs', function()
---         telescope_builtin.find_files({
---             eidden = true,
---             prompt_title = "< Zsh >",
---             cwd = "$HOME/dotfiles/shell"
---         })
---     end, {})
-
---     map('n', '<leader>xd', function()
---         telescope_builtin.find_files({
---             hidden = true,
---             prompt_title = "< dotfiles >",
---             cwd = "$HOME/dotfiles"
---         })
---     end, {})
-
---     -- map('n', '<leader>cht', function()
---     --     telescope_builtin.find_files({
---     --         prompt_title = "< Cht.sh >",
---     --         cwd = "$HOME/dotfiles/cht",
---     --     })
---     -- end, {})
-
--- end
 
 return M

@@ -47,4 +47,5 @@ opt.lazyredraw = true       -- Faster scrolling
 opt.synmaxcol = 240         -- Max column for syntax highlight
 opt.swapfile = false
 opt.colorcolumn = '100'
+opt.scrolloff = 8
 
