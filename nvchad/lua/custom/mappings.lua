@@ -33,6 +33,7 @@ M.general = {
         ["<backspace>A"] = { "<cmd>Telescope live_grep search_dirs=~/dotfiles/nvchad/lua/<CR>", "settings: live grep" },
         ["<backspace>b"] = { "<cmd>Telescope find_files search_dirs=~/.config/nvim<CR>", "settings: find files" },
         ["<backspace>B"] = { "<cmd>Telescope live_grep search_dirs=~/.config/nvim<CR>", "settings: live grep" },
+        ["<backspace>d"] = { "<cmd>Telescope find_files search_dirs=~/dotfiles<CR>", "settings: find files" },
         ["<leader>/"] = { "<cmd>Telescope live_grep<CR>", "live grep current dir" },
         ["<leader>b"] = { "<cmd>Telescope buffers<CR>", "get all buffers" },
         ["<C-S-P>"] = { "<cmd>Telescope buffers<CR>", "get all buffers" },
