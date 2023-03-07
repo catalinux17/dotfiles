@@ -16,8 +16,8 @@ plugins=(git golang copybuffer web-search aliases brew copyfile docker vscode)
 source $ZSH/oh-my-zsh.sh
 
 export EXPORTALIASPATH=~/dotfiles/shell
-source $EXPORTALIASPATH/exports
-source $EXPORTALIASPATH/aliases
+source $EXPORTALIASPATH/exports.sh
+source $EXPORTALIASPATH/aliases.sh
 source ~/.aliases 2> /dev/null
 
 

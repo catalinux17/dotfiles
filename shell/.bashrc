@@ -53,7 +53,7 @@ plugins=(
 
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
 # Custom plugins may be added to ~/.oh-my-bash/custom/plugins/
-# Example format: 
+# Example format:
 #  if [ "$DISPLAY" ] || [ "$SSH" ]; then
 #      plugins+=(tmux-autoattach)
 #  fi
@@ -72,8 +72,8 @@ source "$OSH"/oh-my-bash.sh
 
 # Example aliases
 export EXPORTALIASPATH=~/dotfiles/shell
-source $EXPORTALIASPATH/exports
-source $EXPORTALIASPATH/aliases
+source $EXPORTALIASPATH/exports.sh
+source $EXPORTALIASPATH/aliases.sh
 source ~/.aliases 2> /dev/null
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

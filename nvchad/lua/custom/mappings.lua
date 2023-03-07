@@ -3,7 +3,7 @@ local M = {}
 
 M.general = {
     n = {
-        [";"] = { ":", "enter command mode", opts = { nowait = true } },
+        -- [";"] = { ":", "enter command mode", opts = { nowait = true } },
         ["<backspace>L"] = { "<cmd>Lazy<CR>", "dashboard for Lazy" },
         ["<backspace>P"] = { "<cmd>PackerSync<CR>", "dashboard for Packer" },
         ["<backspace>M"] = { "<cmd>Mason<CR>", "dashboard for Mason" },
