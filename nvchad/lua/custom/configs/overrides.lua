@@ -134,14 +134,14 @@ M.treesitter_textobject = {
                 ["[C"] = "@class.outer"
             }
         },
---         lsp_interop = {
---             enable = true,
---             border = 'none',
---             peek_definition_code = {
---                 ["<leader>Df"] = "@function.outer",
---                 ["<leader>Dc"] = "@class.outer"
---             }
---         }
+        --         lsp_interop = {
+        --             enable = true,
+        --             border = 'none',
+        --             peek_definition_code = {
+        --                 ["<leader>Df"] = "@function.outer",
+        --                 ["<leader>Dc"] = "@class.outer"
+        --             }
+        --         }
     }
 }
 
