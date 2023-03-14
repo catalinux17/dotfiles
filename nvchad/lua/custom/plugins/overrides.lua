@@ -17,6 +17,8 @@ M.treesitter = {
         "gosum",
         "python",
         "markdown",
+        "markdown_inline",
+
         "json",
         "bash",
         "rust",
