@@ -33,7 +33,7 @@ local plugins = {
 
     {
         "williamboman/mason.nvim",
-        opt = overrides.mason,
+        opts = overrides.mason,
     },
     {
         "max397574/better-escape.nvim",
@@ -64,16 +64,17 @@ local plugins = {
     --         vim.keymap.set('n', '<leader>:', '<cmd>AerialToggle!<CR>')
     --     end
     -- },
-    {
-        "nvim-treesitter/nvim-treesitter-textobjects",
-        config = function()
-            local overrides2 = require("custom.plugins.overrides")
-            require("nvim-treesitter.configs").setup({
-                incremental_selection = overrides2.treesitter_textobject.incremental_selection,
-                textobjects = overrides2.treesitter_textobject.textobjects
-            })
-        end
-    },
+    -- {
+    --     "nvim-treesitter/nvim-treesitter-textobjects",
+    --     opts = overrides.treesitter_textobject
+    --     -- config = function()
+    --     --     local overrides2 = require("custom.plugins.overrides")
+    --     --     require("nvim-treesitter.configs").setup({
+    --     --         incremental_selection = overrides2.treesitter_textobject.incremental_selection,
+    --     --         textobjects = overrides2.treesitter_textobject.textobjects
+    --     --     })
+    --     -- end
+    -- },
     -- To make a plugin not be loaded
     -- {
     --   "NvChad/nvim-colorizer.lua",

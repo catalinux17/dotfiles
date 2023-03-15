@@ -12,7 +12,7 @@ M.ui = {
     -- transparency = false,
 }
 
-M.plugins = "custom.configs"
+M.plugins = "custom.plugins"
 
 -- check core.mappings for table structure
 M.mappings = require "custom.mappings"

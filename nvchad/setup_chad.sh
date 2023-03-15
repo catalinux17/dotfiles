@@ -6,7 +6,6 @@ rm -rf ~/.cache/nvim
 
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 cd ~/.config/nvim || exit
-git checkout v2.0
 
 bash ~/dotfiles/nvchad/install_chad.sh
 nvim

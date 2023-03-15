@@ -25,6 +25,10 @@ M.treesitter = {
         "toml",
         "yaml"
     },
+    indent = {
+        enable = true,
+    },
+    auto_install = true
 }
 
 M.mason = {
@@ -49,6 +53,7 @@ M.mason = {
         "yaml-language-server",
     },
 }
+
 M.treesitter_textobject = {
     incremental_selection = {
         enable = true,
