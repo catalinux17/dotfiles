@@ -46,6 +46,7 @@ local plugins = {
 
     {
         "kylechui/nvim-surround",
+        lazy = false,
         config = function()
             require("nvim-surround").setup({})
         end
@@ -64,17 +65,15 @@ local plugins = {
     --         vim.keymap.set('n', '<leader>:', '<cmd>AerialToggle!<CR>')
     --     end
     -- },
-    -- {
-    --     "nvim-treesitter/nvim-treesitter-textobjects",
-    --     opts = overrides.treesitter_textobject
-    --     -- config = function()
-    --     --     local overrides2 = require("custom.plugins.overrides")
-    --     --     require("nvim-treesitter.configs").setup({
-    --     --         incremental_selection = overrides2.treesitter_textobject.incremental_selection,
-    --     --         textobjects = overrides2.treesitter_textobject.textobjects
-    --     --     })
-    --     -- end
-    -- },
+    {
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        dependencies= "nvim-treesitter/nvim-treesitter",
+        opts = overrides.treesitter_textobject,
+        config = function (_, opts)
+            require'nvim-treesitter.configs'.setup(opts)
+        end,
+        lazy = false
+    },
     -- To make a plugin not be loaded
     -- {
     --   "NvChad/nvim-colorizer.lua",

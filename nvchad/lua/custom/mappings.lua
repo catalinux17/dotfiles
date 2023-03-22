@@ -1,4 +1,4 @@
---@type MappingsConfig
+        -- ["<C-c>"] = { "<cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", "comment line" },
 local M = {}
 
 M.general = {
@@ -8,8 +8,8 @@ M.general = {
         ["<backspace>P"] = { "<cmd>PackerSync<CR>", "dashboard for Packer" },
         ["<backspace>M"] = { "<cmd>Mason<CR>", "dashboard for Mason" },
         ["<leader>h"] = { "<cmd>nohl<CR>", "no highlight" },
-        ["<C-/>"] = { "<cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", "comment line" },
-        ["<C-c>"] = { "<cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", "comment line" },
+        ["<C-/>"] = { "<cmd>lua require('Comment.api').toggle.linewise()<CR>", "comment line" },
+        ["<C-c>"] = { "<cmd>lua require('Comment.api').toggle.linewise()<CR>", "comment line" },
         ["U"] = { "<cmd>redo<CR>", "redo" },
         ["<M-j>"] = { function()
             require("nvterm.terminal").toggle "float"
@@ -20,12 +20,15 @@ M.general = {
         ["<M-d>"] = { "<cmd>lua vim.diagnostic.open_float()<CR>", "open diagnostic in float" },
         ["<leader>Y"] = { "<cmd>%y+<CR>", "copy whole file" },
         ["<leader>C"] = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "lsp: code action" },
+        ["<leader>v"] = { "<cmd>vs<CR>", "vertical split" },
         ["gd"] = { "<cmd>lua vim.lsp.buf.definition()<CR>", "lsp: definition" },
         ["<F7>"] = { "<cmd>lua vim.diagnostic.goto_prev()<CR>", "go to prev diag" },
         ["<F8>"] = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "go to next diag" },
         ["<M-b>"] = { "<cmd>lua vim.diagnostic.goto_prev()<CR>", "go to prev diag" },
         ["<M-m>"] = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "go to next diag" },
         ["<F4>"] = { "<cmd>only<bar>vsplit<CR>gd", "open definition in split" },
+        ["<backspace>p"] = { "<cmd>!python3 %<CR>", "run the current python file" },
+
         -- Telescope
         ["<leader>D"] = { "<cmd>Telescope diagnostics<CR>", "show all diagnostics" },
         ["<backspace>a"] = { "<cmd>Telescope find_files search_dirs=~/dotfiles/nvchad/lua/<CR>", "settings: find files" },
@@ -43,7 +46,7 @@ M.general = {
         ["<F3>"] = { "<cmd>Telescope grep_string<CR>", "telescope: find word under cursor" },
         ["gr"] = { "<cmd>Telescope lsp_references<CR>", "telescope: find all references", opts = { noremap = true } },
         ["<leader><leader>"] = { "<cmd>Telescope resume<CR>", "resume telescope" },
-        ["<leader>?"] = { "<cmd>Telescope keymaps<CR>", "show all keymaps" },
+        ["<leader>?"] = { "<cmd>NvCheatsheet<CR>", "show all keymaps" },
         ["<leader>F"] = { "<cmd>Telescope find_files<CR>", "find files in the current directory" },
         ["<C-p>"] = { "<cmd>Telescope find_files<CR>", "find files in the current directory" },
     },
