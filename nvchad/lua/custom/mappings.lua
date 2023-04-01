@@ -1,4 +1,4 @@
-        -- ["<C-c>"] = { "<cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", "comment line" },
+-- ["<C-c>"] = { "<cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", "comment line" },
 local M = {}
 
 M.general = {
@@ -28,7 +28,6 @@ M.general = {
         ["<M-m>"] = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "go to next diag" },
         ["<F4>"] = { "<cmd>only<bar>vsplit<CR>gd", "open definition in split" },
         ["<backspace>p"] = { "<cmd>!python3 %<CR>", "run the current python file" },
-
         -- Telescope
         ["<leader>D"] = { "<cmd>Telescope diagnostics<CR>", "show all diagnostics" },
         ["<backspace>a"] = { "<cmd>Telescope find_files search_dirs=~/dotfiles/nvchad/lua/<CR>", "settings: find files" },

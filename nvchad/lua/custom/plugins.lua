@@ -11,13 +11,13 @@ local plugins = {
             {
                 "jose-elias-alvarez/null-ls.nvim",
                 config = function()
-                    require "custom.configs.null-ls"
+                    require("custom.configs.null-ls")
                 end,
             },
         },
         config = function()
-            require "plugins.configs.lspconfig"
-            require "custom.configs.lspconfig"
+            require("plugins.configs.lspconfig")
+            require("custom.configs.lspconfig")
         end, -- Override to setup mason-lspconfig
     },
     -- overrde plugin configs
@@ -49,7 +49,7 @@ local plugins = {
         lazy = false,
         config = function()
             require("nvim-surround").setup({})
-        end
+        end,
     },
     -- ["stevearc/aerial.nvim"] = {
     --     config = function()
@@ -67,12 +67,17 @@ local plugins = {
     -- },
     {
         "nvim-treesitter/nvim-treesitter-textobjects",
-        dependencies= "nvim-treesitter/nvim-treesitter",
+        dependencies = "nvim-treesitter/nvim-treesitter",
         opts = overrides.treesitter_textobject,
-        config = function (_, opts)
-            require'nvim-treesitter.configs'.setup(opts)
+        config = function(_, opts)
+            require("nvim-treesitter.configs").setup(opts)
         end,
-        lazy = false
+        lazy = false,
+    },
+    {
+        "nvim-treesitter/nvim-treesitter-context",
+        dependencies = "nvim-treesitter/nvim-treesitter-context",
+        lazy = false,
     },
     -- To make a plugin not be loaded
     -- {
@@ -82,8 +87,8 @@ local plugins = {
 
     -- Uncomment if you want to re-enable which-key
     {
-      "folke/which-key.nvim",
-      enabled = false,
+        "folke/which-key.nvim",
+        enabled = false,
     },
 }
 

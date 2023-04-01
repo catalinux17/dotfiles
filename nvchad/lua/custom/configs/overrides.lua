@@ -40,7 +40,7 @@ M.mason = {
         "css-lsp",
         "html-lsp",
         "typescript-language-server",
-        "svelet-language-server",
+        "svelte-language-server",
         -- "deno",
         "bash-language-server",
         "black",

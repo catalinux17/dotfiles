@@ -14,6 +14,7 @@ alias pi="ssh cata@192.168.0.150"
 alias pitemp="vcgencmd measure_temp && vcgencmd measure_volts"
 
 # rusty
+alias l="exa -a"
 alias ls=exa
 alias grep=rg
 alias cat2=bat
@@ -23,8 +24,6 @@ alias gs="git status"
 alias py="python3"
 alias venv="source venv/bin/activate"
 # alias hx=helix
-
-alias vrc="cd ~/dotfiles/kiss_lua_vim/"
 
 alias f=fzf
 
@@ -43,4 +42,4 @@ alias dirvim="cd ~/dotfiles/nvim/"
 alias h=helix
 alias z=zellij
 
-alias lll="exa -T -L 2"
+alias lll="exa -T -a -L 2"
