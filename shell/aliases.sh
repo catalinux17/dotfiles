@@ -16,7 +16,6 @@ alias pitemp="vcgencmd measure_temp && vcgencmd measure_volts"
 # rusty
 alias l="exa -a"
 alias ls=exa
-alias grep=rg
 alias cat2=bat
 alias sk='sk --preview="bat {} --color=always"'
 
