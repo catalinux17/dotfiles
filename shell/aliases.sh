@@ -18,10 +18,11 @@ alias l="exa -a"
 alias ls=exa
 alias cat2=bat
 alias sk='sk --preview="bat {} --color=always"'
+alias irg='sk -i -c "rg {} --color=always" --ansi'
 
 alias gs="git status"
 alias py="python3"
-alias venv="source venv/bin/activate"
+alias venv="source .venv/bin/activate"
 # alias hx=helix
 
 alias f=fzf
@@ -42,3 +43,6 @@ alias h=helix
 alias z=zellij
 
 alias lll="exa -T -a -L 2"
+
+
+alias create_venv="python3 -m venv .venv"
