@@ -4,11 +4,11 @@ theme = "catppuccin_mocha"
 line-number = "relative"
 auto-format = true
 auto-save = true
-rulers = [ 100 ]
+rulers = [100]
 color-modes = true
 true-color = true
 bufferline = "multiple"
-scrolloff = 8 
+scrolloff = 8
 scroll-lines = 5
 # shell = [ "zsh" "-c" ]
 
@@ -20,14 +20,14 @@ display-messages = true
 G = "goto_file_end"
 X = "extend_line_above"
 ret = ["move_line_down", "goto_line_start"]
-C-s = [ "save_selection", ":w" ]
+C-s = ["save_selection", ":w"]
 C-S = ":write-all"
-Z = { Z = ":wq", Q = ":q!" } # Save and quit
+Z = { Z = ":wq", Q = ":q!" }                # Save and quit
 "+" = "repeat_last_motion"
 
 # move line around
-C-j = [ "delete_selection", "move_line_down", "paste_before" ]
-C-k = [ "delete_selection", "move_line_up", "paste_before" ]
+C-j = ["delete_selection", "move_line_down", "paste_before"]
+C-k = ["delete_selection", "move_line_up", "paste_before"]
 
 # move around splits
 C-h = "jump_view_left"
@@ -52,4 +52,3 @@ w = ":w"
 
 [keys.insert]
 C-s = ":w"
-

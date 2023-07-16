@@ -9,4 +9,3 @@ cd ~/.config/nvim || exit
 
 bash ~/dotfiles/nvchad/install_chad.sh
 nvim
-

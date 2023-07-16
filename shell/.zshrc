@@ -15,10 +15,10 @@ HIST_STAMPS="dd/mm/yyyy"
 plugins=(git golang copybuffer web-search aliases brew copyfile docker vscode kubectl kubectl-autocomplete)
 source $ZSH/oh-my-zsh.sh
 
-export EXPORTALIASPATH=~/dotfiles/shell
-source $EXPORTALIASPATH/exports.sh
-source $EXPORTALIASPATH/aliases.sh
-source ~/.aliases 2> /dev/null
-
+export EXPORT_ALIAS_PATH=~/dotfiles/shell
+source $EXPORT_ALIAS_PATH/exports.sh
+source $EXPORT_ALIAS_PATH/aliases.sh
+source $EXPORT_ALIAS_PATH/funcs.sh
+source $HOME/.aliases 2>/dev/null
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

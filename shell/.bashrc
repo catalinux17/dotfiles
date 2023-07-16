@@ -2,15 +2,13 @@
 
 # Enable the subsequent settings only in interactive sessions
 case $- in
-  *i*) ;;
-    *) return;;
+*i*) ;;
+*) return ;;
 esac
 
 export OSH=~/.oh-my-bash
 
 OSH_THEME="minimal"
-
-
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -71,10 +69,11 @@ source "$OSH"/oh-my-bash.sh
 # fi
 
 # Example aliases
-export EXPORTALIASPATH=~/dotfiles/shell
-source $EXPORTALIASPATH/exports.sh
-source $EXPORTALIASPATH/aliases.sh
-source ~/.aliases 2> /dev/null
+export EXPORT_ALIAS_PATH=~/dotfiles/shell
+source $EXPORT_ALIAS_PATH/exports.sh
+source $EXPORT_ALIAS_PATH/aliases.sh
+source $EXPORT_ALIAS_PATH/funcs.sh
+source ~/.aliases 2>/dev/null
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"

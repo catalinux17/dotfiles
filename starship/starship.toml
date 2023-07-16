@@ -1,5 +1,0 @@
-add_newline=false
-
-
-[shell]
-format = "[$indicator]($style)"

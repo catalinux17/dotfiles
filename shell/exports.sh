@@ -1,4 +1,3 @@
-
 add_to_path() {
     export PATH=$1:$PATH
 }
@@ -23,4 +22,3 @@ export VISUAL=nvim
 export EDITOR=nvim
 
 export FZF_DEFAULT_COMMAND='fd --type f'
-

@@ -44,5 +44,4 @@ alias z=zellij
 
 alias lll="exa -T -a -L 2"
 
-
 alias create_venv="python3 -m venv .venv"
