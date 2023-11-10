@@ -73,7 +73,7 @@ export EXPORT_ALIAS_PATH=~/dotfiles/shell
 source $EXPORT_ALIAS_PATH/exports.sh
 source $EXPORT_ALIAS_PATH/aliases.sh
 source $EXPORT_ALIAS_PATH/funcs.sh
-source ~/.aliases 2>/dev/null
+source $HOME/.aliases 2>/dev/null
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"

@@ -44,4 +44,13 @@ alias z=zellij
 
 alias lll="exa -T -a -L 2"
 
-alias create_venv="python3 -m venv .venv"
+# alias create_venv="python3 -m venv .venv"
+
+create_venv() {
+    python3.11 -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
+
+}
+
+alias venv_requirements="pip install -r requirements.txt"
