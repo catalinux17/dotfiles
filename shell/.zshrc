@@ -18,8 +18,23 @@ source $ZSH/oh-my-zsh.sh
 export EXPORT_ALIAS_PATH=~/dotfiles/shell
 source $EXPORT_ALIAS_PATH/exports.sh
 source $EXPORT_ALIAS_PATH/aliases.sh
-source $EXPORT_ALIAS_PATH/funcs.sh
+source $EXPORT_ALIAS_PATH/functions.sh
 source $HOME/.aliases 2>/dev/null
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+# bun completions
+[ -s "/Users/ocatalin/.bun/_bun" ] && source "/Users/ocatalin/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/ocatalin/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

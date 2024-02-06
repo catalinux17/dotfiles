@@ -1,6 +1,4 @@
 .DS_Store
-nvim/plugin/packer_compiled.lua
 helix/runtime
-nvim/plugin/packer_compiled.lua
-
+git
 lazy-lock.json

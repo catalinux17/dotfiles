@@ -26,9 +26,9 @@ OMB_USE_SUDO=true
 # Example format: completions=(ssh git bundler gem pip pip3)
 # Add wisely, as too many completions slow down shell startup.
 completions=(
-  git
-  composer
-  ssh
+	git
+	composer
+	ssh
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
@@ -36,7 +36,7 @@ completions=(
 # Example format: aliases=(vagrant composer git-avh)
 # Add wisely, as too many aliases slow down shell startup.
 aliases=(
-  general
+	general
 )
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -44,9 +44,9 @@ aliases=(
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  bashmarks
-  golang
+	git
+	bashmarks
+	golang
 )
 
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -72,7 +72,7 @@ source "$OSH"/oh-my-bash.sh
 export EXPORT_ALIAS_PATH=~/dotfiles/shell
 source $EXPORT_ALIAS_PATH/exports.sh
 source $EXPORT_ALIAS_PATH/aliases.sh
-source $EXPORT_ALIAS_PATH/funcs.sh
+source $EXPORT_ALIAS_PATH/functions.sh
 source $HOME/.aliases 2>/dev/null
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

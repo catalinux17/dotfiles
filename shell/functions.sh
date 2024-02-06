@@ -1,4 +1,9 @@
-#!/bin/bash
+#!/bin/sh
+
+tmuxpp() {
+	CHOSEN_FILE=$(find ~/.tmuxp -type f -name "*.yml" | fzf)
+	tmuxp load "$CHOSEN_FILE"
+}
 
 installgo() {
     if [ -z "$1" ]; then
@@ -6,6 +11,7 @@ installgo() {
         return 1
     fi
 
+    echo "$1"
     echo "envs:"
     echo "GOROOT: $GOROOT"
     echo "GOPATH: $GOPATH"

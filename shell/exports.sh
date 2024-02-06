@@ -1,5 +1,5 @@
 add_to_path() {
-    export PATH=$1:$PATH
+	export PATH=$1:$PATH
 }
 
 add_to_path ~/.deno/bin
@@ -10,6 +10,7 @@ add_to_path ~/.rustup/toolchains/stable-aarch64-apple-darwin/bin
 add_to_path /opt/homebrew/bin
 add_to_path ~/dotfiles/helix/runtime
 add_to_path ~/.local/share/nvim/mason/bin
+add_to_path ~/.bun/bin
 
 export GOPATH=~/gopath
 export GOROOT=~/goroot
