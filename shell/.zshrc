@@ -21,11 +21,14 @@ source $EXPORT_ALIAS_PATH/aliases.sh
 source $EXPORT_ALIAS_PATH/functions.sh
 source $HOME/.aliases 2>/dev/null
 
+if command -v zoxide &>/dev/null; then
+	eval "$(zoxide init zsh)"
+fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+# [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 # bun completions
-[ -s "/Users/ocatalin/.bun/_bun" ] && source "/Users/ocatalin/.bun/_bun"
+# [ -s "/Users/ocatalin/.bun/_bun" ] && source "/Users/ocatalin/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"

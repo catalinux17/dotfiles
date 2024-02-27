@@ -40,7 +40,7 @@ alias dirvim="cd ~/dotfiles/nvim/"
 
 # alias hx=helix
 alias h=helix
-alias z=zellij
+# alias z=zellij
 
 # alias create_venv="python3 -m venv .venv"
 
