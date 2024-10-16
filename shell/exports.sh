@@ -11,6 +11,7 @@ add_to_path /opt/homebrew/bin
 add_to_path ~/dotfiles/helix/runtime
 add_to_path ~/.local/share/nvim/mason/bin
 add_to_path ~/.bun/bin
+add_to_path /opt/homebrew/opt/postgresql@15/bin
 
 export GOPATH=~/gopath
 export GOROOT=~/goroot

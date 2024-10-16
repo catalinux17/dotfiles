@@ -1,7 +1,7 @@
 export ZSH=~/.oh-my-zsh
 #
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="gozilla"
 
 DISABLE_UPDATE_PROMPT="true"
 
@@ -12,7 +12,7 @@ DISABLE_UPDATE_PROMPT="true"
 COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="dd/mm/yyyy"
-plugins=(git golang copybuffer web-search aliases brew copyfile docker vscode kubectl) 
+plugins=(git golang copybuffer web-search aliases brew copyfile docker vscode kubectl terraform) 
 source $ZSH/oh-my-zsh.sh
 
 export EXPORT_ALIAS_PATH=~/dotfiles/shell

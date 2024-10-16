@@ -14,8 +14,6 @@ alias pi="ssh cata@192.168.0.150"
 alias pitemp="vcgencmd measure_temp && vcgencmd measure_volts"
 
 # rusty
-# alias l="exa -a"
-# alias ls=exa
 alias cat2=bat
 alias sk='sk --preview="bat {} --color=always"'
 alias irg='sk -i -c "rg {} --color=always" --ansi'
@@ -52,3 +50,4 @@ create_venv() {
 }
 
 alias venv_requirements="pip install -r requirements.txt"
+alias rr='while [ $? -ne 0 ]; do eval $(history -p !!); done'
