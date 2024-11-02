@@ -41,7 +41,7 @@ installgo() {
         "github.com/go-delve/delve/cmd/dlv@latest"
         "honnef.co/go/tools/cmd/staticcheck@latest"
         "golang.org/x/tools/gopls@latest"
-        "github.com/cosmtrek/air@latest"
+        "github.com/air-verse/air@latest"
     )
 
     # Loop through each tool and install

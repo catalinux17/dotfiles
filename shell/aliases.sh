@@ -14,8 +14,8 @@ alias pi="ssh cata@192.168.0.150"
 alias pitemp="vcgencmd measure_temp && vcgencmd measure_volts"
 
 # rusty
-alias l="exa -a"
-alias ls=exa
+# alias l="exa -a"
+# alias ls=exa
 alias cat2=bat
 alias sk='sk --preview="bat {} --color=always"'
 alias irg='sk -i -c "rg {} --color=always" --ansi'
@@ -42,14 +42,12 @@ alias dirvim="cd ~/dotfiles/nvim/"
 alias h=helix
 alias z=zellij
 
-alias lll="exa -T -a -L 2"
-
 # alias create_venv="python3 -m venv .venv"
 
 create_venv() {
-    python3.11 -m venv .venv
-    source .venv/bin/activate
-    pip install -r requirements.txt
+	python3.11 -m venv .venv
+	source .venv/bin/activate
+	pip install -r requirements.txt
 
 }
 
