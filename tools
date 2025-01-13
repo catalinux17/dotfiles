@@ -2,8 +2,10 @@ zsh
 bash
 alacritty
 bat
-exa
+eza
 ripgrep
+lazygit
+zoxide
 neovim
 dust
 fd

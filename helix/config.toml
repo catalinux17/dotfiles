@@ -10,6 +10,11 @@ true-color = true
 bufferline = "multiple"
 scrolloff = 8
 scroll-lines = 5
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "error"
+
 # shell = [ "zsh" "-c" ]
 
 [editor.lsp]

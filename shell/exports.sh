@@ -16,6 +16,7 @@ add_to_path /opt/homebrew/opt/postgresql@15/bin
 export GOPATH=~/gopath
 export GOROOT=~/goroot
 export GOBIN=~/goroot/bin
+export HELIX_RUNTIME=~/dotfiles/helix/runtime
 add_to_path $GOPATH
 add_to_path $GOROOT
 add_to_path $GOBIN
