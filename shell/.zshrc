@@ -12,7 +12,7 @@ DISABLE_UPDATE_PROMPT="true"
 COMPLETION_WAITING_DOTS="true"
 
 HIST_STAMPS="dd/mm/yyyy"
-plugins=(git golang copybuffer web-search aliases brew copyfile docker vscode kubectl terraform) 
+plugins=(git golang copybuffer web-search aliases brew copyfile vscode kubectl terraform jump z eza) 
 source $ZSH/oh-my-zsh.sh
 
 export EXPORT_ALIAS_PATH=~/dotfiles/shell
