@@ -77,3 +77,5 @@ source $HOME/.aliases 2>/dev/null
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"
+. "/home/cata/.deno/env"
+source /home/cata/.local/share/bash-completion/completions/deno.bash
