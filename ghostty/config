@@ -1,0 +1,15 @@
+# Ghostty configuration
+
+# Font settings (matching kitty config)
+font-family = Source Code Pro
+font-size = 14
+
+# Window
+window-padding-x = 2
+window-padding-y = 2
+
+# Cursor
+cursor-style = block
+
+# Shell integration
+shell-integration = detect

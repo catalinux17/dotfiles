@@ -1,3 +1,3 @@
-rm ~/.alacritty.yml 2>/dev/null
+rm -f ~/.alacritty.yml
 
 ln -s ~/dotfiles/alacritty/.alacritty.yml ~

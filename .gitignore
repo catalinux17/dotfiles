@@ -2,3 +2,4 @@
 helix/runtime
 git
 lazy-lock.json
+git/.gitconfig
