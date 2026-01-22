@@ -2,8 +2,6 @@ alias ..="cd .."
 alias vim=nvim
 alias vi=nvim
 alias v=nvim
-alias x="xclip -selection clipboard"
-alias c=pbcopy
 alias viewpr="gh pr view --web"
 alias viewrepo="gh repo view --web"
 alias clearcache="sudo swapoff -a && swapon -a"
@@ -19,7 +17,6 @@ alias irg='sk -i -c "rg {} --color=always" --ansi'
 
 alias gs="git status"
 alias py="python3"
-alias venv="source .venv/bin/activate"
 # alias hx=helix
 
 alias f=fzf
@@ -37,14 +34,8 @@ alias updaterust="curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 alias h=helix
 # alias z=zellij
 
-# alias create_venv="python3 -m venv .venv"
-
-create_venv() {
-	python3.12 -m venv .venv
-	source .venv/bin/activate
-	pip install -r requirements.txt
-
-}
-
+alias create_venv="python3.14 -m venv venv"
+alias venv="source .venv/bin/activate"
 alias venv_requirements="pip install -r requirements.txt"
+
 alias rr='while [ $? -ne 0 ]; do eval $(history -p !!); done'

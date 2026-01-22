@@ -55,3 +55,14 @@ installgo() {
 
     cd || exit
 }
+
+c() {
+	if command -v wl-copy >/dev/null 2>&1; then
+		wl-copy
+	elif command -v pbcopy >/dev/null 2>&1; then
+		pbcopy
+	else
+		echo "Neither wl-copy nor pbcopy found"
+		return 1
+	fi
+}
