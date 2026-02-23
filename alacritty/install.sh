@@ -1,3 +1,4 @@
-rm -f ~/.alacritty.yml
+rm -f ~/.config/alacritty/alacritty.toml
 
-ln -s ~/dotfiles/alacritty/.alacritty.yml ~
+mkdir -p ~/.config/alacritty
+ln -s ~/dotfiles/alacritty/alacritty.toml ~/.config/alacritty/

@@ -1,0 +1,30 @@
+[font]
+size = 15.0
+
+[font.bold]
+CaskaydiaMono
+family = "CaskaydiaMono"
+style = "Bold"
+
+[font.italic]
+family = "CaskaydiaMono"
+style = "Italic"
+
+[font.normal]
+family = "CaskaydiaMono"
+
+[window]
+decorations = "none"
+
+[window.dimensions]
+columns = 90
+lines = 28
+
+[window.padding]
+x = 20
+y = 20
+
+[window.position]
+x = 500
+y = 250
+
