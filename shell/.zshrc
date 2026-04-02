@@ -1,7 +1,7 @@
 export ZSH=~/.oh-my-zsh
 #
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="gozilla"
+ZSH_THEME="robbyrussell"
 
 DISABLE_UPDATE_PROMPT="true"
 

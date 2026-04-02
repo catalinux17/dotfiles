@@ -13,3 +13,20 @@ cursor-style = block
 
 # Shell integration
 shell-integration = detect
+
+
+
+# splits
+# keybind = alt+d=new_split:right
+keybind = ctrl+shift+d=new_split:right
+
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:bottom
+keybind = ctrl+shift+k=goto_split:top
+keybind = ctrl+shift+l=goto_split:right
+
+# keybind = performable:ctrl+shift+h=goto_split:left
+# keybind = performable:ctrl+shift+j=goto_split:down
+# keybind = performable:ctrl+shift+k=goto_split:up
+# keybind = performable:ctrl+shift+l=goto_split:right
+# keybind = ctrl+x>3=new_split:up

@@ -38,4 +38,4 @@ alias create_venv="python3.14 -m venv venv"
 alias venv="source .venv/bin/activate"
 alias venv_requirements="pip install -r requirements.txt"
 
-alias rr='while [ $? -ne 0 ]; do eval $(history -p !!); done'
+alias week_no='date +%V'
