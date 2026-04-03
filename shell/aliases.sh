@@ -16,6 +16,7 @@ alias sk='sk --preview="bat {} --color=always"'
 alias irg='sk -i -c "rg {} --color=always" --ansi'
 
 alias gs="git status"
+alias gd="git diff"
 alias py="python3"
 # alias hx=helix
 
