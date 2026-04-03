@@ -7,3 +7,4 @@ fisher install joseluisq/gitnow
 fisher install jorgebucaran/autopair.fish
 fisher install IlanCosman/tide@v6
 fisher install edc/bass
+fisher install meaningful-ooo/sponge

@@ -35,3 +35,11 @@ if type -q bass
         bass source ~/.aliases
     end
 end
+
+# Load bobnet fish config (command vault + work-specific tools)
+if test -d ~/dotfiles_bobnet/fish
+    set -p fish_function_path ~/dotfiles_bobnet/fish/functions
+    for f in ~/dotfiles_bobnet/fish/conf.d/*.fish
+        source $f
+    end
+end
