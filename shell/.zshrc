@@ -25,6 +25,8 @@ if command -v zoxide &>/dev/null; then
 	eval "$(zoxide init zsh)"
 fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+[ -f "$HOME/.config/vite-plus"] && . "/Users/cat/.config/vite-plus/env"
 # [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
 # bun completions
@@ -39,6 +41,3 @@ _just_completion() {
 }
 
 compctl -K _just_completion just
-
-# Vite+ bin (https://viteplus.dev)
-. "/Users/cat/.config/vite-plus/env"
