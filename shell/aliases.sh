@@ -40,3 +40,13 @@ alias venv="source .venv/bin/activate"
 alias venv_requirements="pip install -r requirements.txt"
 
 alias week_no='date +%V'
+
+alias acomar='ssh -i ~/.ssh/hetzner/acomar root@135.181.104.164'
+
+alias ssh_puly='ssh -i ~/.ssh/hetzner/hetzner root@2a01:4f9:c011:b64a::1'
+alias ssh_pul='ssh -i ~/.ssh/hetzner/hetzner root@62.238.31.175'
+alias ssh_pul_db='ssh -i ~/.ssh/hetzner/hetzner -L 5432:localhost:5432 root@62.238.31.175'
+
+alias pi_fwd='ssh -L 3000:127.0.0.1:3000 -L 3001:127.0.0.1:3001 -L 9428:127.0.0.1:9428 -L 8428:127.0.0.1:8428 -L 5432:127.0.0.1:5432 -L 6379:127.0.0.1:6379 -N cata@pi'
+
+alias gomtv="go mod tidy && go mod vendor"

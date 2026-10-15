@@ -79,3 +79,26 @@ nneovim_install_debian() {
 
     sudo ln -sf /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/nvim
 }
+
+watchh() {
+  if [[ -z "$ZSH_VERSION" ]]; then
+    echo "Error: 'watchh' is a Zsh-only function." >&2
+    return 1
+  fi
+
+
+  local interval=10
+
+  if [[ "$1" == <-> ]]; then
+    interval="$1"
+    shift
+  fi
+
+  while :; do
+    clear
+    date
+    echo "Interval: ${interval}s"
+    "$@"
+    sleep "$interval"
+  done
+}

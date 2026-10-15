@@ -14,3 +14,4 @@ source $EXPORT_ALIAS_PATH/functions.sh
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 [ -f "$HOME/.deno/env" ] && . "$HOME/.deno/env"
 [ -f "$HOME/.local/share/bash-completion/completions/deno.bash" ] && source "$HOME/.local/share/bash-completion/completions/deno.bash"
+eval "$(just --completions bash)"
